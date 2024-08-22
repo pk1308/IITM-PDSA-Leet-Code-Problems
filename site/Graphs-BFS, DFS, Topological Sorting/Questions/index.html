@@ -1,0 +1,1860 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="DESCRIPTION">
+      
+      
+        <meta name="author" content="PK">
+      
+      
+      
+        <link rel="prev" href="../../Heaps%20and%20Trees/Questions/">
+      
+      
+        <link rel="next" href="../../Arrays%2C%20Lists%2C%20Stacks%2C%20Queues%2C%20Hashing/Questions/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
+    
+    
+      
+        <title>Leet Code Problems on Graph Algorithms - DBMS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#leet-code-problems-on-graph-algorithms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DBMS" class="md-header__button md-logo" aria-label="DBMS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DBMS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Leet Code Problems on Graph Algorithms
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pk1308/DBMS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pk1308/DBMS
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Greedy/Questions/" class="md-tabs__link">
+          
+  
+  Greedy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Heaps%20and%20Trees/Questions/" class="md-tabs__link">
+          
+  
+  Heaps and Trees
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Graphs-BFS, DFS, Topological Sorting
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Arrays%2C%20Lists%2C%20Stacks%2C%20Queues%2C%20Hashing/Questions/" class="md-tabs__link">
+          
+  
+  Arrays, Lists, Stacks, Queues, Hashing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Sorting%20and%20Searching/Questions/" class="md-tabs__link">
+          
+  
+  Sorting and Searching
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Shortest%20Paths%20and%20Minimum%20Spanning%20Trees/Questions/" class="md-tabs__link">
+          
+  
+  Shortest Paths and Minimum Spanning Trees
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Dynamic%20Programming/Questions/" class="md-tabs__link">
+          
+  
+  Dynamic Programming
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DBMS" class="md-nav__button md-logo" aria-label="DBMS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DBMS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pk1308/DBMS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pk1308/DBMS
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Greedy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Greedy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Greedy/Questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problems on Greedy Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Heaps and Trees
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Heaps and Trees
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Heaps%20and%20Trees/Questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leet Code Problems on Heaps and Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Graphs-BFS, DFS, Topological Sorting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Graphs-BFS, DFS, Topological Sorting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Leet Code Problems on Graph Algorithms
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Leet Code Problems on Graph Algorithms
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-find-the-town-judge" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Find the Town Judge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-course-schedule-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Course Schedule-I
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-course-schedule-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Course Schedule-II
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-snakes-and-ladders" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Snakes and Ladders
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-sort-items-by-groups-respecting-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Sort Items By Groups Respecting Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-find-if-path-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Find If Path Exists
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-number-of-provinces" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Number of Provinces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-find-the-town-judge_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Find the Town Judge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Find the Town Judge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-by-counting-indegrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 By Counting Indegrees
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 By Counting Indegrees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-course-schedule-i_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Course Schedule-I
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Course Schedule-I">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-topological-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Topological Sorting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Topological Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-topological-sort-better-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Topological Sort: Better Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Topological Sort: Better Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-course-schedule-ii_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Course Schedule-II
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-snakes-and-ladders_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Snakes and Ladders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Snakes and Ladders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-using-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Using BFS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Using BFS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-sort-items-by-groups-respecting-dependencies_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Sort Items By Groups Respecting Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Sort Items By Groups Respecting Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-using-topological-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Using Topological Sort
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Using Topological Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#psuedocode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Psuedocode:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-find-if-path-exists_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Find If Path Exists
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Find If Path Exists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-using-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Using BFS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 Using BFS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-number-of-provinces_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Number of Provinces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Number of Provinces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-using-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Using BFS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 Using BFS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arrays, Lists, Stacks, Queues, Hashing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Arrays, Lists, Stacks, Queues, Hashing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Arrays%2C%20Lists%2C%20Stacks%2C%20Queues%2C%20Hashing/Questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leet Code Problems on Arrays, Lists, Stacks, Queues, and Hashing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sorting and Searching
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Sorting and Searching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sorting%20and%20Searching/Questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problems on Sorting and Searching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Shortest Paths and Minimum Spanning Trees
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Shortest Paths and Minimum Spanning Trees
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Shortest%20Paths%20and%20Minimum%20Spanning%20Trees/Questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leet Code Problems on Shortest Path and Minimum Cost Spanning Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dynamic Programming
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Dynamic Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Dynamic%20Programming/Questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leet Code Problems Based on Dynamic Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<div><h1 id="leet-code-problems-on-graph-algorithms">Leet Code Problems on Graph Algorithms</h1>
+<h5 id="1-find-the-town-judge">1. <a href="#1-find-the-town-judge-1">Find the Town Judge</a></h5>
+<h5 id="2-course-schedule-i">2. <a href="#2-course-schedule-i">Course Schedule-I</a></h5>
+<h5 id="3-course-schedule-ii">3. <a href="#3-course-schedule-ii-1">Course Schedule-II</a></h5>
+<h5 id="4-snakes-and-ladders">4. <a href="#4-snakes-and-ladders-1">Snakes and Ladders</a></h5>
+<h5 id="5-sort-items-by-groups-respecting-dependencies">5. <a href="#5-sort-items-by-groups-respecting-dependencies-1">Sort Items By Groups Respecting Dependencies</a></h5>
+<h5 id="6-find-if-path-exists">6. <a href="#6-find-if-path-exists-1">Find If Path Exists</a></h5>
+<h5 id="7-number-of-provinces">7. <a href="#7-number-of-provinces-1">Number of Provinces</a></h5>
+<h2 id="1-find-the-town-judge_1">1. <a href="https://leetcode.com/problems/find-the-town-judge/description/">Find the Town Judge</a></h2>
+<h3 id="11-by-counting-indegrees">1.1 By Counting Indegrees</h3>
+<p>We're given the array <code>trusts</code>, where <code>trust[i] = [a_i, b_i]</code> means that <code>a_i_</code> trusts <code>b_i_</code>. Can we convert this problem into a graph problem?</p>
+<p>If <code>a_i_</code> trusts <code>b_i_</code>, then we can consider it an edge from <code>a_i_</code> to <code>b_i_</code>. </p>
+<p>The townjudge is a person who:
+- Trusts no one <span class="arithmatex">\(\implies outdegree(townjudge) = 0\)</span> , and
+- Everyone except him / herself trusts him / her <span class="arithmatex">\(\implies indegree(townjudge) = n - 1\)</span>.</p>
+<p>Keep two dictionaries:
+- To count the indegrees of all the nodes
+- To count the outdegrees of all the nodes</p>
+<p>Then for every person, check if its outdegree is <span class="arithmatex">\(0\)</span> and indegree is <span class="arithmatex">\(n-1\)</span>.</p>
+<p>Complexity: <span class="arithmatex">\(O(n)\)</span>, since the creating the dictionaries takes <span class="arithmatex">\(O(n)\)</span> and then iterating over people takes another <span class="arithmatex">\(O(n)\)</span>.</p>
+<h4 id="code">Code:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>class Solution:
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    def findJudge(self, n: int, trust: List[List[int]]) -&gt; int:        
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        if n &lt;= 1:
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>            return 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        indegrees = { }
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        outdegrees = { }
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        # trust = [a_i, b_i]
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        # a_i -&gt; b_i
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        for a, b in trust:
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>            if a not in indegrees: indegrees[a] = 0
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>            if b not in indegrees: indegrees[b] = 0
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            if a not in outdegrees: outdegrees[a] = 0
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>            if b not in outdegrees: outdegrees[b] = 0
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>            outdegrees[a] += 1
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>            indegrees[b] += 1
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        # If indegree == n - 1 and outdegree == 0, then we have found the town judge.
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        townjudge = -1
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        for person in indegrees:
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>            if outdegrees[person] == 0:
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>                if indegrees[person] &gt;= n - 1:
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>                    townjudge = person 
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>                    break
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        return townjudge        
+</code></pre></div>
+<h2 id="2-course-schedule-i_1">2. <a href="https://leetcode.com/problems/course-schedule/description/">Course Schedule-I</a></h2>
+<h3 id="21-topological-sorting">2.1 Topological Sorting</h3>
+<p>The <code>prerequisites[i] = [a_i, b_i]</code> <span class="arithmatex">\(\implies\)</span> <code>b_i</code> has to come before <code>a_i</code>. In other words, <code>a_i</code> is dependent on <code>b_i</code>. Can you convert this problem into a graph problem? Further, which algorithm do we need to use to find a sequence that satisfies dependencies?</p>
+<p>If <code>b_i</code> has to come before <code>a_i</code>, then we add an edge from <code>b_i</code> to <code>a_i</code>. Please note the direction of the edge. We can convert this into an adjacency matrix or an adjacency list. For this problem, we are converting the graph into an adjacency matrix. Once we have converted this problem into a graph problem, we can use the algorithm we use when we need to find a sequence that satisfies some dependencies- topological sorting.</p>
+<p>When would you say that we have successfully found the sequence of courses satisfying the dependencies? 
+When we the sequence that we get has all the courses- no course is left.  </p>
+<h4 id="code_1">Code:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>class Solution:
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    def preprocessing(self, numCourses, prerequisites) -&gt; list[list[int]]:
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        adjacency_matrix = [ [0 for i in range(numCourses)] for i in range(numCourses) ]
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        for a, b in prerequisites:
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>            adjacency_matrix[b][a] = 1
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        return adjacency_matrix
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    # Implementation of Topological sort for Adjacency matrix
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    def toposort(self, AMat):
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        #Initialization
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        (rows,cols) = len(AMat), len(AMat[0])
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        indegree = {}
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        toposortlist = []
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        #Compute indegree for each vertex
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        for c in range(cols):
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>            indegree[c] = 0
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            for r in range(rows):
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>                if AMat[r][c] == 1:
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>                    indegree[c] = indegree[c] + 1
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>        # Topological sort Computing process
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        for i in range(rows):
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>            # Select the min level vertex for removing the graph which has indegree 0
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>            zero_indegree = [k for k in range(cols) if indegree[k] == 0]
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>            if not zero_indegree:return toposortlist #Handle the case where there are no more zero indegree vertices
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>            j = zero_indegree[0]
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>            # Store the removed vertex j in toposortlist and reduce the indegree by one 
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>            toposortlist.append(j)
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>            indegree[j] = indegree[j] - 1
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>            # Reduce the indegree of each adjacent of the removed vertex j by 1
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>            for k in range(cols):
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>                if AMat[j][k] == 1:
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>                    indegree[k] = indegree[k] - 1
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>        return(toposortlist)
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -&gt; bool:
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>        adjacency_matrix = self.preprocessing(numCourses, prerequisites)
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>        toposortlist = self.toposort(adjacency_matrix)
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>        if len(toposortlist) == numCourses: return True
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>        return False
+</code></pre></div>
+<h3 id="22-topological-sort-better-implementation">2.2 Topological Sort: Better Implementation</h3>
+<p>The approach used is similar to the above approach. However, we are utilizing better data structures to increase our performance. Instead of keeping an adjacency matrix, we are utilizing a combination of doubly ended queues and adjacency lists. </p>
+<p>Here's how:
+- Keep a deque for vertices with zero degree queue such that the insert at end and delete from start operations are both constant time.
+- Keep a dictionary of indegrees which counts the indegrees for each vertex</p>
+<p>Complexity: $O(|V| + |E|)</p>
+<h4 id="code_2">Code:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>from collections import deque, Counter
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>class Solution:
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    def canFinish(self, numCourse, prerequisites):
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        AList = { i: [] for i in range(numCourse)}
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        indegree = Counter()
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        visited = { i:False for i in range(numCourse)}
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        for course, prereq in prerequisites:
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>            AList[prereq].append(course)
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>            indegree[course] += 1
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        # Initialization
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        toposortlist = []
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        zerodegreeq = deque()
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        # Find the vertex with indegree 0 and added into the queue
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>        for u in range(numCourse):
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>            if indegree[u] == 0:
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>                zerodegreeq.append(u)
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        # Topological sort Computing process
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        while (zerodegreeq):
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>            # Remove one vertex from queue which have zero degree vertices
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>            curr_vertex = zerodegreeq.popleft()       
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>            # Store the removed vertex in toposortlist and reduce the indegree by one 
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>            toposortlist.append(curr_vertex)
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>            indegree[curr_vertex] = indegree[curr_vertex]-1
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>            # Repeat for each adjacent of the removed vertex
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>            for adj_vertex in AList[curr_vertex]:
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>                # Reduce the indegree of each adjacent of the removed vertex by 1
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>                indegree[adj_vertex] = indegree[adj_vertex] - 1
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>                # If after reducing the degree of adjacent, it becomes zero then insert it into the queue
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>                if indegree[adj_vertex] == 0:
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>                    zerodegreeq.append(adj_vertex)                
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>        return len(toposortlist) == numCourse
+</code></pre></div>
+<h2 id="3-course-schedule-ii_1">3. <a href="https://leetcode.com/problems/course-schedule-ii/description/">Course Schedule-II</a></h2>
+<p>This problem is an exact replica of the above problem, except that we have to return a sequence that satisfies the dependencies, instead of returning a boolean of whether or not we can create such a sequence. </p>
+<p>We can use the same approaches discussed in the above question. </p>
+<h2 id="4-snakes-and-ladders_1">4. <a href="https://leetcode.com/problems/snakes-and-ladders/description/">Snakes and Ladders</a></h2>
+<h3 id="41-using-bfs">4.1 Using BFS</h3>
+<p>We are given a board with <span class="arithmatex">\(n^2\)</span> cells. From any particular cell, there can be at maximum only six moves. Can we convert this structure into a graph?</p>
+<p>For example, in the first test case, assume we are at cell <span class="arithmatex">\(1\)</span>. </p>
+<p>The next possible moves are: <span class="arithmatex">\(15, 3, 4, 5, 6, 7\)</span> because <span class="arithmatex">\(2\)</span> has a ladder to <span class="arithmatex">\(15\)</span>. 
+From cell <span class="arithmatex">\(1\)</span>, we can make each of the next possible moves as an edge.</p>
+<p>The task is to find the least number of moves required to reach <span class="arithmatex">\(n^2\)</span> starting from <span class="arithmatex">\(1\)</span>. Can you identify what type of a problem this is and which algorithm we can use for this problem?</p>
+<p>It's a shortest path problem without edge weights. The algorithm that we can use for this problem is BFS. </p>
+<p>Pseudocode:
+- We first need to convert the board into a graph. 
+    - For every cell, check the next six cells. 
+        - If the cell has a ladder or a snake, then we need to find out where the ladder ends which is given in cell: <code>board[row][col]</code>
+        - If the cell does not have a ladder or a snake, then <code>board[row][col]</code> will have the vaue <span class="arithmatex">\(-1\)</span>. 
+        - Add the edge as: <code>[cell]</code> to <code>board[row][cell]</code> or the next moves.</p>
+<ul>
+<li>Once we have the graph, we can run BFS on this graph, which will return the shortest path. </li>
+</ul>
+<h4 id="code_3">Code:</h4>
+<h2 id="5-sort-items-by-groups-respecting-dependencies_1">5. <a href="https://leetcode.com/problems/sort-items-by-groups-respecting-dependencies/description/">Sort Items By Groups Respecting Dependencies</a></h2>
+<h3 id="51-using-topological-sort">5.1 Using Topological Sort</h3>
+<p>We need to list a a sequential order of <code>items</code> such that the items belonging to the same group are listed next to each other. Each item can have a dependency such that the other item needs to be completed first- as given in the <code>beforeItems</code> array. It is easy to see that this is a topological ordering problem. </p>
+<p>Take a moment to think about the following:
+Let's say we run topological sort directly on the beforeItems. We may pass some test cases. But what test cases might we fail?
+Whenever we have multiple <code>items</code> that have zero indegree, then we have to make a choice as to which item should we take first. Let's take an example: 
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>group[0] = [1, 2]
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>group[1] = [3, 4]
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>indegree[1] = 0
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>indegree[3] = 0
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>indegree[2] = indegree[4] = 1 
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Assume: 2 needs to be come before 4, and 1 needs to come before 2. 
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>1 -&gt; 2 -&gt; 4
+</code></pre></div>
+<p>Now, the issue will come when we are selecting between the <code>items</code> 1 and 3. If our algorithm chooses 3, then all the other elements belonging to group 1 should come next to 3- like: 3, 4-, and only then we'll be able to add elements from group 0- like: 3, 4, 1, 2. This violates the condition that <code>1 -&gt; 2 -&gt; 4</code>.</p>
+<p>To solve this problem, we need to keep a graph for the <code>groups</code> as well. Whenever we are choosing which <code>item</code> to select for the topological order, we need to first check the <code>groups</code> graph. </p>
+<p>Thus, we keep two graphs- one for <code>items</code> and one for <code>groups</code>. Then we run a sort of nested topological sort- the outer one for the <code>groups</code> graph, and the inner one for the <code>items</code> graph. This will give us the correct solution that respects both the group dependencies and the item dependencies. </p>
+<h4 id="psuedocode">Psuedocode:</h4>
+<ol>
+<li>
+<p>Since we are going to need to list all elements belonging to a group side by side, we will keep a dictionary of the format: <code>group:[all items of that group]</code> for easy retrieval.</p>
+</li>
+<li>
+<p>Use <code>beforeItems</code> array to construct both the graphs- <code>groups</code> and <code>items</code>. You can use the either an adjacency matrix or an adjacency list representation for this. Here, we are using Adjacency List representation. </p>
+<ul>
+<li>If <code>items[i]</code> needs to come before <code>items[j]</code>, then add edge from <code>i</code> to <code>j</code> for the <code>items_graph</code>. </li>
+<li>Similarly, for the <code>group_graph</code>, add the edge from <code>group[i]</code> to <code>group[j]</code>, since the item in <code>i</code>th group needs to come before the item in the <code>j</code>th group. </li>
+</ul>
+</li>
+<li>
+<p>Once you have the graphs, run nested topological sort as mentioned above. </p>
+</li>
+</ol>
+<h4 id="code_4">Code:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a># Implementation of Queue
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>class Queue:
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    def __init__(self):
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        self.queue = []
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    def enqueue(self,v):
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        self.queue.append(v)
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    def isempty(self):
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        return(self.queue == [])
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    def dequeue(self):
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>        v = None
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        if not self.isempty():
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>            v = self.queue[0]
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>            self.queue = self.queue[1:]
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        return(v)    
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    def __str__(self):
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        return(str(self.queue))
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>class Solution:
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    # Creates a dictionary that returns all elements of a particular group. Used in the main algorithm when we are listing all the items # that belong to a group side by side
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    def get_group_wise_elements(self, group, m):
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>        group_wise_elements = { i:[] for i in range(m) }
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>        for i in range(len(group)):
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>            grp = group[i] if group[i] &gt;= 0 else -i-1
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>            if grp not in group_wise_elements:
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>                group_wise_elements[grp] = []
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>            group_wise_elements[grp].append(i)
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>        return group_wise_elements
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>    # Convert the problem into two graphs- group_graph and items_graph. Along with it, return indegrees for each node in both the graphs. 
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>    def preprocessing(self, beforeItems, group, m, n, groupwise_items):
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>        group_indegree, items_indegree = {}, {i:0 for i in range(n)}
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>        items_alist =  {i:[] for i in range(n)}
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>        group_alist = {}
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>        for key in groupwise_items:
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>            group_alist[key] = set()
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>            group_indegree[key] = 0
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>        for i in range(len(beforeItems)):
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>            before = beforeItems[i]
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>            for num in before:
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>                if num not in items_alist:
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>                    items_alist[num] = [ ]
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>                items_alist[num].append(i)
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>                items_indegree[i] += 1
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>                grp_num = group[num] if group[num] &gt;= 0 else -num-1
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>                grp_i = group[i] if group[i] &gt;= 0 else -i-1  
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>                if grp_num != grp_i:
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>                    if grp_num not in group_alist:
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>                        group_alist[grp_num] = set()
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>                    group_alist[grp_num].add(grp_i)
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>        for key in group_alist.keys():
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>            group_alist[key] = list(group_alist[key])
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>        for u in group_alist.keys():
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>            for v in group_alist[u]:
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>                if v not in group_indegree:
+<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>                    group_indegree[v] = 0
+<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>                group_indegree[v] += 1
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>
+<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>        return items_alist, group_alist, items_indegree, group_indegree
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>
+<a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>    # Run the actual nested topological sorting algorithm
+<a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>    def lpath(self, items_alist, group_alist, items_indegree, group_indegree, groupwise_items, n, group):
+<a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a>        output = [ ]
+<a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>
+<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>        grp_queue = Queue()
+<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>        items_queue = Queue()
+<a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a>
+<a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a>        for grp in group_indegree:
+<a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a>            if group_indegree[grp] == 0:
+<a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a>                grp_queue.enqueue(grp)
+<a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a>
+<a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a>        # Outer topological sort is for groups
+<a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a>        while not grp_queue.isempty():
+<a id="__codelineno-4-78" name="__codelineno-4-78" href="#__codelineno-4-78"></a>            curr_grp = grp_queue.dequeue()
+<a id="__codelineno-4-79" name="__codelineno-4-79" href="#__codelineno-4-79"></a>            group_indegree[curr_grp] -= 1
+<a id="__codelineno-4-80" name="__codelineno-4-80" href="#__codelineno-4-80"></a>            for adj_grp in group_alist[curr_grp]:
+<a id="__codelineno-4-81" name="__codelineno-4-81" href="#__codelineno-4-81"></a>                # Reduce the indegree of each adjacent group of the removed vertex by 1
+<a id="__codelineno-4-82" name="__codelineno-4-82" href="#__codelineno-4-82"></a>                group_indegree[adj_grp] -= 1
+<a id="__codelineno-4-83" name="__codelineno-4-83" href="#__codelineno-4-83"></a>
+<a id="__codelineno-4-84" name="__codelineno-4-84" href="#__codelineno-4-84"></a>                # If after reducing the degree of adjacent group, it becomes zero then insert it into the group queue
+<a id="__codelineno-4-85" name="__codelineno-4-85" href="#__codelineno-4-85"></a>                if group_indegree[adj_grp] == 0 :
+<a id="__codelineno-4-86" name="__codelineno-4-86" href="#__codelineno-4-86"></a>                    grp_queue.enqueue(adj_grp)
+<a id="__codelineno-4-87" name="__codelineno-4-87" href="#__codelineno-4-87"></a>
+<a id="__codelineno-4-88" name="__codelineno-4-88" href="#__codelineno-4-88"></a>            for i in groupwise_items[curr_grp]:
+<a id="__codelineno-4-89" name="__codelineno-4-89" href="#__codelineno-4-89"></a>                if items_indegree[i] == 0 :
+<a id="__codelineno-4-90" name="__codelineno-4-90" href="#__codelineno-4-90"></a>                    items_queue.enqueue(i)
+<a id="__codelineno-4-91" name="__codelineno-4-91" href="#__codelineno-4-91"></a>
+<a id="__codelineno-4-92" name="__codelineno-4-92" href="#__codelineno-4-92"></a>            # Inner topological sort is for the items
+<a id="__codelineno-4-93" name="__codelineno-4-93" href="#__codelineno-4-93"></a>            while (not items_queue.isempty()):
+<a id="__codelineno-4-94" name="__codelineno-4-94" href="#__codelineno-4-94"></a>
+<a id="__codelineno-4-95" name="__codelineno-4-95" href="#__codelineno-4-95"></a>                # Remove one vertex from items queue which have zero degree items and reduce the indegree by 1
+<a id="__codelineno-4-96" name="__codelineno-4-96" href="#__codelineno-4-96"></a>                curr_vertex = items_queue.dequeue()
+<a id="__codelineno-4-97" name="__codelineno-4-97" href="#__codelineno-4-97"></a>                output.append(curr_vertex)
+<a id="__codelineno-4-98" name="__codelineno-4-98" href="#__codelineno-4-98"></a>                items_indegree[curr_vertex] = items_indegree[curr_vertex] - 1
+<a id="__codelineno-4-99" name="__codelineno-4-99" href="#__codelineno-4-99"></a>
+<a id="__codelineno-4-100" name="__codelineno-4-100" href="#__codelineno-4-100"></a>                # Repeat for each adjacent of the removed item 
+<a id="__codelineno-4-101" name="__codelineno-4-101" href="#__codelineno-4-101"></a>                for adj_vertex in items_alist[curr_vertex]:
+<a id="__codelineno-4-102" name="__codelineno-4-102" href="#__codelineno-4-102"></a>                    # Reduce the indegree of each adjacent of the removed item by 1
+<a id="__codelineno-4-103" name="__codelineno-4-103" href="#__codelineno-4-103"></a>                    items_indegree[adj_vertex] = items_indegree[adj_vertex] - 1
+<a id="__codelineno-4-104" name="__codelineno-4-104" href="#__codelineno-4-104"></a>
+<a id="__codelineno-4-105" name="__codelineno-4-105" href="#__codelineno-4-105"></a>                    # If after reducing the degree of adjacent item, it becomes zero then insert it into the items queue
+<a id="__codelineno-4-106" name="__codelineno-4-106" href="#__codelineno-4-106"></a>                    if items_indegree[adj_vertex] == 0 and group[adj_vertex] == curr_grp:
+<a id="__codelineno-4-107" name="__codelineno-4-107" href="#__codelineno-4-107"></a>                        items_queue.enqueue(adj_vertex)
+<a id="__codelineno-4-108" name="__codelineno-4-108" href="#__codelineno-4-108"></a>
+<a id="__codelineno-4-109" name="__codelineno-4-109" href="#__codelineno-4-109"></a>        if len(output) != n: return []
+<a id="__codelineno-4-110" name="__codelineno-4-110" href="#__codelineno-4-110"></a>        return output
+<a id="__codelineno-4-111" name="__codelineno-4-111" href="#__codelineno-4-111"></a>
+<a id="__codelineno-4-112" name="__codelineno-4-112" href="#__codelineno-4-112"></a>    def sortItems(self, n: int, m: int, group: List[int], beforeItems: List[List[int]]) -&gt; List[int]:
+<a id="__codelineno-4-113" name="__codelineno-4-113" href="#__codelineno-4-113"></a>        group_wise_items = self.get_group_wise_elements(group, m)
+<a id="__codelineno-4-114" name="__codelineno-4-114" href="#__codelineno-4-114"></a>
+<a id="__codelineno-4-115" name="__codelineno-4-115" href="#__codelineno-4-115"></a>        items_alist, group_alist, items_indegree, group_indegree = self.preprocessing(beforeItems,group, m, n, group_wise_items)
+<a id="__codelineno-4-116" name="__codelineno-4-116" href="#__codelineno-4-116"></a>
+<a id="__codelineno-4-117" name="__codelineno-4-117" href="#__codelineno-4-117"></a>        return self.lpath(items_alist, group_alist, items_indegree, group_indegree, group_wise_items, n, group)
+</code></pre></div>
+<h2 id="6-find-if-path-exists_1">6. <a href="https://leetcode.com/problems/find-if-path-exists-in-graph/description/">Find If Path Exists</a></h2>
+<h3 id="61-using-bfs">6.1 Using BFS</h3>
+<p>What is the question asking you to do?
+- We need to find out whether we can reach a particular destination from the given source node. That is, it's a reachability problem. </p>
+<p>Can you convert the given <code>edges</code> list into an adjacency list or an adjacency matrix representation?
+- Each <code>edges[i] = [u_i, v_i]</code> represents a bidirectional edge, which means there is an edge from <code>u</code> to <code>v</code>, and <code>v</code> to <code>u</code>. 
+- So we can iterate over the entire <code>edges</code> array, and add the two edges for every <code>edges[i]</code>. Here's the code snippet for converting the <code>edges</code> array into an adjacency list:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>for u, v in edges:
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    adj_list[u].append(v)
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    adj_list[v].append(u)
+</code></pre></div>
+<p>Once we have the adjacency list, which algorithm will give us whether we can reach <code>destination</code> from the <code>source</code>?
+- We can use either BFS or DFS. For this solution, we are using BFS. </p>
+<h4 id="code_5">Code:</h4>
+<p>Note: For a better, more concise code, we have used the <code>deque</code> data structure from the <code>collections</code> module in Python. We can use it to implement a <code>queue</code> used in BFS. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>from collections import deque
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>class Solution:
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -&gt; bool:
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        adj_list = { i:[ ] for i in range(n) }
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        visited = set()
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        for u, v in edges:
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>            adj_list[u].append(v)
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>            adj_list[v].append(u)
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>        queue = deque([source])
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>        visited.add(source)
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>        while queue:
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>            vertex = queue.popleft()
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>            if vertex == destination:
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>                return True
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>            for neighbor in adj_list[vertex]:
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>                if neighbor not in visited:
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>                    queue.append(neighbor)
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>                    visited.add(neighbor)
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>        return False
+</code></pre></div>
+<h2 id="7-number-of-provinces_1">7. <a href="https://leetcode.com/problems/number-of-provinces/description/">Number of Provinces</a></h2>
+<h3 id="71-using-bfs">7.1 Using BFS</h3>
+<p>We are given a matrix <code>isConnected</code>, whose <code>[i][j]</code>th entry tells us whether there is an undirected edge from <code>i</code> to <code>j</code>. We can interpret this <code>isConnected</code> matrix as an adjacency matrix. </p>
+<p>A province is a set of vertices that are connected to each other. We are asked to find the number of provinces from the matrix. </p>
+<p>Can you identify the type of the problem?
+- The problem is about finding the number of connected components from the graph. </p>
+<p>Can you identify which algorithm we can use to solve this problem?
+- We can use BFS or DFS to solve this problem. For this solution, we will use BFS. </p>
+<h4 id="code_6">Code:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>from collections import deque
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>class Solution:
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    def get_neighbors(self, AMat, vertex):
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>        """Given an adjacency matrix and a vertex, returns all neighbors for that vertex"""
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        neighbors = []
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        for i in range(len(AMat)):
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>            if AMat[vertex][i] == 1:
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>                neighbors.append(i)
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>        return neighbors
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    def BFS(self, AMat, source):
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>        """
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>        Runs BFS from a given source vertex and returns the set of vertices visited in that run of BFS.
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>        That is, each run of the BFS will give us one province, or one connected component.
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>        """
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>        visited = set()
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>        queue = deque([source])  # Initialize the queue with the source vertex
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>        visited.add(source)
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>        while queue:
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>            vertex = queue.popleft()
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>            neighbors = self.get_neighbors(AMat, vertex)  # Pass both AMat and vertex
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>            for neighbor in neighbors:
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>                if neighbor not in visited:
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>                    queue.append(neighbor)
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>                    visited.add(neighbor)
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>        return visited
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>    def findCircleNum(self, isConnected):
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>        # Initially, every vertex gets an invalid component number
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>        components = {i: -1 for i in range(len(isConnected))}
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>
+<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>        # Keep track of the component number and the number of vertices already visited across BFS runs
+<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>        component_number = 0
+<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>        seen = 0
+<a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>
+<a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>        while seen &lt; len(isConnected):
+<a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>            startv = min([i for i in range(len(isConnected)) if components[i] == -1])
+<a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>            visited = self.BFS(isConnected, startv)
+<a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a>
+<a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a>            # For every vertex that was visited in the current run of BFS, update its component number and update 
+<a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>            # the number of vertices seen.
+<a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a>            for v in visited:
+<a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a>                components[v] = component_number
+<a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a>                seen += 1
+<a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a>
+<a id="__codelineno-7-48" name="__codelineno-7-48" href="#__codelineno-7-48"></a>            # Increment component number such that for the next run of BFS, 
+<a id="__codelineno-7-49" name="__codelineno-7-49" href="#__codelineno-7-49"></a>            # a different component number will be assigned
+<a id="__codelineno-7-50" name="__codelineno-7-50" href="#__codelineno-7-50"></a>            component_number += 1
+<a id="__codelineno-7-51" name="__codelineno-7-51" href="#__codelineno-7-51"></a>
+<a id="__codelineno-7-52" name="__codelineno-7-52" href="#__codelineno-7-52"></a>        return component_number 
+</code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://github.com/pk1308"  target="_blank" rel="noopener">PK</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/pk1308" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.471ce7a9.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1505 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="DESCRIPTION">
+      
+      
+        <meta name="author" content="PK">
+      
+      
+      
+        <link rel="prev" href="../../Shortest%20Paths%20and%20Minimum%20Spanning%20Trees/Questions/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
+    
+    
+      
+        <title>Leet Code Problems Based on Dynamic Programming - DBMS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#leet-code-problems-based-on-dynamic-programming" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DBMS" class="md-header__button md-logo" aria-label="DBMS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DBMS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Leet Code Problems Based on Dynamic Programming
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pk1308/DBMS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pk1308/DBMS
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Greedy/Questions/" class="md-tabs__link">
+          
+  
+  Greedy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Heaps%20and%20Trees/Questions/" class="md-tabs__link">
+          
+  
+  Heaps and Trees
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Graphs-BFS%2C%20DFS%2C%20Topological%20Sorting/Questions/" class="md-tabs__link">
+          
+  
+  Graphs-BFS, DFS, Topological Sorting
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Arrays%2C%20Lists%2C%20Stacks%2C%20Queues%2C%20Hashing/Questions/" class="md-tabs__link">
+          
+  
+  Arrays, Lists, Stacks, Queues, Hashing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Sorting%20and%20Searching/Questions/" class="md-tabs__link">
+          
+  
+  Sorting and Searching
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Shortest%20Paths%20and%20Minimum%20Spanning%20Trees/Questions/" class="md-tabs__link">
+          
+  
+  Shortest Paths and Minimum Spanning Trees
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Dynamic Programming
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DBMS" class="md-nav__button md-logo" aria-label="DBMS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DBMS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pk1308/DBMS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pk1308/DBMS
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Greedy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Greedy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Greedy/Questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problems on Greedy Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Heaps and Trees
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Heaps and Trees
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Heaps%20and%20Trees/Questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leet Code Problems on Heaps and Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Graphs-BFS, DFS, Topological Sorting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Graphs-BFS, DFS, Topological Sorting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Graphs-BFS%2C%20DFS%2C%20Topological%20Sorting/Questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leet Code Problems on Graph Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Arrays, Lists, Stacks, Queues, Hashing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Arrays, Lists, Stacks, Queues, Hashing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Arrays%2C%20Lists%2C%20Stacks%2C%20Queues%2C%20Hashing/Questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leet Code Problems on Arrays, Lists, Stacks, Queues, and Hashing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sorting and Searching
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Sorting and Searching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sorting%20and%20Searching/Questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problems on Sorting and Searching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Shortest Paths and Minimum Spanning Trees
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Shortest Paths and Minimum Spanning Trees
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Shortest%20Paths%20and%20Minimum%20Spanning%20Trees/Questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leet Code Problems on Shortest Path and Minimum Cost Spanning Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Dynamic Programming
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Dynamic Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Leet Code Problems Based on Dynamic Programming
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Leet Code Problems Based on Dynamic Programming
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-climbing-stairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Climbing Stairs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-house-robber" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. House Robber
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-fibonacci-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Fibonacci Numbers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-triangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Triangle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-coin-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Coin Change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-climbing-stairs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Climbing Stairs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Climbing Stairs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-using-dynamic-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Using Dynamic Programming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Using Dynamic Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-house-robber_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. House Robber
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. House Robber">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-using-dynamic-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Using Dynamic Programming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Using Dynamic Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-fibonacci-numbers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Fibonacci Numbers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Fibonacci Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-using-dynamic-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Using Dynamic Programming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Using Dynamic Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-triangle_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Triangle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Triangle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-using-dynamic-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Using Dynamic Programming
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-coin-change_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Coin Change
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Coin Change">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-using-dynamic-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Using Dynamic Programming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Using Dynamic Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<div><h1 id="leet-code-problems-based-on-dynamic-programming">Leet Code Problems Based on Dynamic Programming</h1>
+<h5 id="1-climbing-stairs">1. <a href="#1-climbing-stairs-1">Climbing Stairs</a></h5>
+<h5 id="2-house-robber">2. <a href="#2-house-robber-1">House Robber</a></h5>
+<h5 id="3-fibonacci-numbers">3. <a href="#3-fibonacci-numbers-1">Fibonacci Numbers</a></h5>
+<h5 id="4-triangle">4. <a href="#triangle-1">Triangle</a></h5>
+<h5 id="5-coin-change">5. <a href="#5-coin-change-1">Coin Change</a></h5>
+<h2 id="1-climbing-stairs_1">1. <a href="https://leetcode.com/problems/climbing-stairs/description/">Climbing Stairs</a></h2>
+<h3 id="11-using-dynamic-programming">1.1 Using Dynamic Programming</h3>
+<p>Can you find out the recursive approach to this problem? Try to think about the base cases and the the recursive relation. </p>
+<ul>
+<li>
+<p>When you are on the <code>n</code>th step, there are zero ways to reach <code>n</code>th step. If you are on the <code>n-1</code>th step, there is only one way to reach <code>n</code>th step. Lastly, if you are on the <code>n-2</code>th step, there are two ways of reaching the <code>n</code>th step. </p>
+</li>
+<li>
+<p>Further, if you observe, the following relationship holds:
+$$
+ways(k) = ways(k - 1) + ways(k - 2)
+$$</p>
+</li>
+</ul>
+<p>The number of ways to reach a stair <span class="arithmatex">\(k\)</span> is the sum of the number of ways to reach the stairs <span class="arithmatex">\(k-1\)</span> and <span class="arithmatex">\(k-2\)</span>. </p>
+<p>Can you think of a solution that uses dynamic programming and solves this problem in linear time?</p>
+<h4 id="code">Code:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>class Solution:
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    def climbStairs(self, n: int) -&gt; int:
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        L = [0]*n # Initialize the dynamic programming array
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        # Base Cases
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        if n == 1: return 1 
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        if n == 2: return 2
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        L[0] = 1
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        L[1] = 2
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        # ways[i] = ways[i - 1] + ways[i - 2]
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        for i in range(2, n):
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            L[i] = L[i - 1] + L[i - 2]
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        # Last element corresponds to the nth stair. So return that value.
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        return L[-1]
+</code></pre></div>
+<h2 id="2-house-robber_1">2. <a href="https://leetcode.com/problems/house-robber/description/">House Robber</a></h2>
+<h3 id="21-using-dynamic-programming">2.1 Using Dynamic Programming</h3>
+<p>We cannot break two adjacent houses. That is, <code>nums[i]</code> and <code>nums[i+1]</code> cannot be stolen together. So, for each house, we have to decide whether we should rob it or not. Now, let's think about how we can keep track of the maximum amount of money you can rob <strong>up to</strong> each house. We could use an array where each element represents the maximum amount of money that can be robbed up to that house. That is, <code>maximum_amount[i]</code> tells us the maximum amount of money that could be stolen up to the house <code>i</code>. </p>
+<p>What might be the base cases for this <code>maximum_amount</code>, abbreviated as <code>m_a</code>, array?
+- When it's the first house, then <code>m_a[0]</code> should the amount in the first house. 
+- When it's the second house, then <code>m_a[1]</code> should be the maximum for <code>nums[0]</code> and <code>nums[1]</code>, since they are adjacent and we cannot rob both. </p>
+<p>Can you come up with a recursive relation that solves this problem?
+- From the third house onwards, we can either rob the house or choose to not rob it. If we rob it, we can't rob the previous house. If we don't rob it, we can rob the previous house. 
+- In our <code>m_a</code> array, we can represent the relation as this:
+    - $ m_a[i] = max(m_a[i-1], m_a[i-2] + nums[i])$.
+    - If we don't rob the current house, we are taking the amount stolen up to the previous house. 
+    - If we rob the current house, then we are taking the amount stolen up to the second previous house and adding the amount from the current house to it. </p>
+<ul>
+<li>Whatever value we have accumulated till the last house will be the maximum amount that we can steal. </li>
+<li>Time Complexity: <span class="arithmatex">\(O(n)\)</span></li>
+</ul>
+<h4 id="code_1">Code:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>class Solution:
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    def rob(self, nums: List[int]) -&gt; int:
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        if len(nums) == 1:
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>            return nums[0]
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        maximum_amount = [0] * len(nums)
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        # Base cases
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        maximum_amount[0] = nums[0]
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        maximum_amount[1] = max(nums[0], nums[1])
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        for i in range(2, len(nums)):
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            maximum_amount[i] = max(maximum_amount[i-1], maximum_amount[i-2] + nums[i])
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        return maximum_amount[-1]
+</code></pre></div>
+<h2 id="3-fibonacci-numbers_1">3. <a href="https://leetcode.com/problems/fibonacci-number/description/">Fibonacci Numbers</a></h2>
+<h3 id="31-using-dynamic-programming">3.1 Using Dynamic Programming</h3>
+<p>Let's begin by thinking about the problem. We need to calculate the Fibonacci number $F(n) $ for a given <span class="arithmatex">\(n\)</span>. The Fibonacci sequence is defined as:</p>
+<ul>
+<li>$ F(0) = 0$</li>
+<li><span class="arithmatex">\(F(1) = 1\)</span></li>
+<li><span class="arithmatex">\(F(n) = F(n-1) + F(n-2) \text{ for } n &gt; 1\)</span></li>
+</ul>
+<p>Consider what this means. <span class="arithmatex">\(F(n)\)</span> is the sum of the two preceding numbers in the sequence. This suggests that if we know <span class="arithmatex">\(F(n-1)\)</span> and <span class="arithmatex">\(F(n-2)\)</span>, we can find $F(n) $.</p>
+<p>But how do we approach calculating <span class="arithmatex">\(F(n)\)</span>?</p>
+<p>First, think about the simplest cases, <span class="arithmatex">\(F(0)\)</span> and <span class="arithmatex">\(F(1)\)</span>. These are our base cases because they are defined directly without requiring any further calculations.</p>
+<p>Now, if <span class="arithmatex">\(n = 2\)</span>, we use the formula <span class="arithmatex">\(F(2) = F(1) + F(0)\)</span>. Since we already know $F(1) = 1 $ and $ F(0) = 0$, we can easily calculate $F(2) = 1 + 0 = 1 $.</p>
+<p>What if <span class="arithmatex">\(n = 3\)</span>? Again, using the formula, $F(3) = F(2) + F(1) $. From the previous steps, we know $ F(2) = 1 $ and $F(1) = 1 $, so $F(3) = 1 + 1 = 2 $.</p>
+<p>Notice that each time we calculate a Fibonacci number, we rely on the results of previous calculations. </p>
+<p>Now, let’s consider a general approach. If we want to calculate $F(n) $, how can we systematically work our way up from the base cases to $F(n) $?</p>
+<p>One way is to use <strong>recursion</strong>. We can define a function that calls itself with smaller values of $  n $ until it reaches the base cases. However, while recursion is elegant, it has a downside—repeatedly solving the same subproblems, which leads to inefficiency.</p>
+<p>Can we improve this?</p>
+<p>Yes, we can! Instead of recalculating the same Fibonacci numbers multiple times, we can <strong>store</strong> the results of each calculation and reuse them when needed.</p>
+<p>So here's the approach that we will take:
+- We will define an array named <code>fibtable</code>, where <code>fibtable[i]</code> is the <code>ith</code> number in the fibonacci sequence. 
+- Observe this relationship: <code>fibtable[i] = fibtable[i - 1] + fibtable[i - 2]</code>
+- Once we hardcode the base cases, we can iterate over the <code>i</code> upto <code>n</code>, and update the <code>fibtable[i]</code> as per the above update condition. </p>
+<h4 id="code_2">Code:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>class Solution:
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    def fib(self, n: int) -&gt; int:
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        # Initialize the fibtable array to be all zeros
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        fibtable = [0] * (n + 1)
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        # Base Case 1: Where n == 0
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        if n == 0: return fibtable[0]
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        # Base Case 2: Where n == 1
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        fibtable[1] = 1
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        for i in range(2, n + 1):
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>            #F(n) = F(n - 1) + F(n - 2)
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>            fibtable[i] = fibtable[i - 1] + fibtable[i - 2]
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        # fibtable[i] is the ith fibonacci number. Thus, to get nth fibonacci number, return fibtable[n]
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        return fibtable[n]
+</code></pre></div>
+<h2 id="4-triangle_1">4. <a href="https://leetcode.com/problems/triangle/description/">Triangle</a></h2>
+<h3 id="41-using-dynamic-programming">4.1 Using Dynamic Programming</h3>
+<p>The question is asking for us to find the minimum path sum from the top to the bottom of the triangle, where each step can be to only the <code>ith</code> or <code>i + 1 th</code> cell in the row below. </p>
+<p>Can you break this problem into further subproblems?
+- If we start from the topmost cell of the triangle in the test case 1, the minimum path sum could be described using the following structure:
+<span class="arithmatex">\(MPS(2) = 2 + min(MPS(3), MPS(4))\)</span>, where $MPS(x) $ tells us the minimum path sum starting from a particular cell in the triangle. More generally, 
+<span class="arithmatex">\(MPS(triangle[row][col]) = triangle[row][col]+ min(MPS(triangle[row + 1][col]), MPS(triangle[row + 1][col + 1]))\)</span></p>
+<p>Can you identify the base cases here?
+- The base cases are all the leaf nodes of the triangle where there are no more children. </p>
+<p>Since we are solving subproblems and then combining those subproblems to solve the original problem, we can use dynamic programming here. Further, using bottom-up approach here might be better than using the top-down approach. </p>
+<p>After processing the last row, that is- the row of the base cases, we can move one level up in the triangle. After processing that level, we get a minimum path of length 2 for each of the cells in the second last row. More generally, after processing a row, each element in that row would hold the minimum path sum from that element to the bottom of the triangle. After processing the entire triangle, the top element of the triangle would hold the minimum path sum from the top to the bottom of the triangle, which is the answer to the problem.</p>
+<p>Here's how we can approach the pseudocode:
+- Start with the second last row. ( We don't need to start from the last row, as the last row is the base case and it will return values just the same as what are there in the cells)
+- Then for every cell of that row, we apply the following update rule:
+<span class="arithmatex">\(<span class="arithmatex">\(MPS(triangle[row][col]) = triangle[row][col]+ min(MPS(triangle[row + 1][col]), MPS(triangle[row + 1][col + 1]))\)</span>\)</span>
+- Repeat the same for every row till you reach the topmost row. 
+- Return the value from the cell at the top- first cell of the first row. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>class Solution:
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    def minimumTotal(self, triangle: List[List[int]]) -&gt; int:
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        # Start from the second-to-last row of the triangle
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        for row in range(len(triangle) - 2, -1, -1):
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>            for col in range(len(triangle[row])):
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>                # Update the current element with the sum of the element itself
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>                # and the minimum of the two adjacent elements in the row below
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>                triangle[row][col] = triangle[row][col] +  min(triangle[row + 1][col], triangle[row + 1][col + 1])
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        # The top element now contains the minimum path sum
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        return triangle[0][0]
+</code></pre></div>
+<h2 id="5-coin-change_1">5. <a href="https://leetcode.com/problems/coin-change/description/">Coin Change</a></h2>
+<h3 id="51-using-dynamic-programming">5.1 Using Dynamic Programming</h3>
+<p>The first thought here can be that we need to use the greedy strategy. But as we can see from the test cases, the greedy strategy won't always give us the optimal solution. </p>
+<p>Can you try to break this problem down into subproblems and identify if there are overlapping subproblems?
+- We can observe that for a given amount, the minimum number of coins needed to get to that amount is one plus the minimum number of coins required to get <span class="arithmatex">\(amount - coin\)</span>. Concisely, we can write this as:
+    - <span class="arithmatex">\(mincoins(amount) = mincoins(amount - coin) + 1\)</span>
+- If you expand the subproblems for every coin in the given test case, you can observe that the subproblems overlap. </p>
+<p>How can you use dynamic programming to solve this problem?
+- Since we know the subproblem structure, we can use memoization. 
+- Keep an array of length <span class="arithmatex">\(amount + 1\)</span>, where each index <code>i</code> stores the minimum number of coins required to get change for amount <code>i</code>. Let this array be called <code>dp</code>.
+- Initially this array will be set to infinity. 
+- For each element, we will update the value as: 
+    - <code>dp[i] = min(dp[i], dp[i - coin] + 1)</code>
+    - We will do this for every amount in <code>range(0, amount + 1)</code>, and we will do this for every <code>coin</code> in the <code>coins</code> array.</p>
+<p>What can be the base cases here?
+- To get to amount <span class="arithmatex">\(0\)</span>, we need <span class="arithmatex">\(0\)</span> coins. Thus, <code>dp[0] = 0</code>. 
+- Further, for every coin in the given coins array, <code>dp[coin] = 1</code>, as one coin will suffice to get to that amount. </p>
+<h4 id="code_3">Code:</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>class Solution:
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    def coinChange(self, coins, amount):
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        # Initialize a dp array where dp[i] will hold the minimum number of coins required for amount i
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        dp = [float('inf')] * (amount + 1)
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        # Base case: No coins are needed to make amount 0
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        dp[0] = 0
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        for coin in coins:
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>            dp[coin] = 1
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        # Fill the dp array
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        for coin in coins:
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>            for x in range(coin, amount + 1):
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>                dp[x] = min(dp[x], dp[x - coin] + 1)
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        # If dp[amount] is still inf, it means it's not possible to make that amount with given coins
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        return dp[amount] if dp[amount] != float('inf') else -1
+</code></pre></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://github.com/pk1308"  target="_blank" rel="noopener">PK</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/pk1308" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.471ce7a9.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

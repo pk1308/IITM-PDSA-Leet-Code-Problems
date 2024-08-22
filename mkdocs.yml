@@ -1,0 +1,75 @@
+site_name: DBMS
+nav:
+- Home:
+  - index.md
+- Greedy:
+  - Greedy/Questions.md
+- Heaps and Trees:
+  - Heaps and Trees/Questions.md
+- Graphs-BFS, DFS, Topological Sorting:
+  - Graphs-BFS, DFS, Topological Sorting/Questions.md
+- Arrays, Lists, Stacks, Queues, Hashing:
+  - Arrays, Lists, Stacks, Queues, Hashing/Questions.md
+- Sorting and Searching:
+  - Sorting and Searching/Questions.md
+- Shortest Paths and Minimum Spanning Trees:
+  - Shortest Paths and Minimum Spanning Trees/Questions.md
+- Dynamic Programming:
+  - Dynamic Programming/Questions.md
+site_author: PK
+site_description: DESCRIPTION
+repo_name: pk1308/DBMS
+repo_url: https://github.com/pk1308/DBMS
+theme:
+  name: material
+  features:
+  - navigation.tabs
+  - navigation.sections
+  - toc.integrate
+  - navigation.top
+  language: en
+  palette:
+  - scheme: default
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Switch to dark mode
+    primary: teal
+    accent: purple
+  - scheme: slate
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to light mode
+    primary: teal
+    accent: lime
+extra:
+  social:
+  - icon: fontawesome/brands/github-alt
+    link: https://github.com/pk1308
+extra_javascript:
+- javascripts/config.js
+- https://polyfill.io/v3/polyfill.min.js?features=es6
+- https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+markdown_extensions:
+- pymdownx.arithmatex:
+    generic: true
+- attr_list
+- pymdownx.highlight:
+    anchor_linenums: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
+- admonition
+- pymdownx.arithmatex:
+    generic: true
+- footnotes
+- pymdownx.details
+- pymdownx.superfences
+- pymdownx.mark
+- pymdownx.pathconverter
+- pymdownx.arithmatex:
+    generic: true
+extra_css:
+- https://unpkg.com/katex@0/dist/katex.min.css
+plugins:
+- search
+- mkdocs-pdf
+copyright: '&copy; 2024 <a href="https://github.com/pk1308"  target="_blank" rel="noopener">PK</a>'
