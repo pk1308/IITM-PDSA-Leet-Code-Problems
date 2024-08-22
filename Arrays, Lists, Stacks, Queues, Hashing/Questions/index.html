@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Leet Code Problems on Arrays, Lists, Stacks, Queues, and Hashing - DBMS</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        <meta name="author" content="PK">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">DBMS</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#greedy-collapse" aria-expanded="false">
+                    Greedy
+                </a>
+                <div class="collapse" id="greedy-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Greedy/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Problems on Greedy Algorithms
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#heaps-and-trees-collapse" aria-expanded="false">
+                    Heaps and Trees
+                </a>
+                <div class="collapse" id="heaps-and-trees-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Heaps%20and%20Trees/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Heaps and Trees
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#graphs-bfs,-dfs,-topological-sorting-collapse" aria-expanded="false">
+                    Graphs-BFS, DFS, Topological Sorting
+                </a>
+                <div class="collapse" id="graphs-bfs,-dfs,-topological-sorting-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Graphs-BFS%2C%20DFS%2C%20Topological%20Sorting/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Graph Algorithms
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#arrays,-lists,-stacks,-queues,-hashing-collapse" aria-expanded="false">
+                    Arrays, Lists, Stacks, Queues, Hashing
+                </a>
+                <div class="collapse" id="arrays,-lists,-stacks,-queues,-hashing-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Arrays, Lists, Stacks, Queues, and Hashing
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#sorting-and-searching-collapse" aria-expanded="false">
+                    Sorting and Searching
+                </a>
+                <div class="collapse" id="sorting-and-searching-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Sorting%20and%20Searching/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Problems on Sorting and Searching
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#shortest-paths-and-minimum-spanning-trees-collapse" aria-expanded="false">
+                    Shortest Paths and Minimum Spanning Trees
+                </a>
+                <div class="collapse" id="shortest-paths-and-minimum-spanning-trees-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Shortest%20Paths%20and%20Minimum%20Spanning%20Trees/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Shortest Path and Minimum Cost Spanning Trees
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#dynamic-programming-collapse" aria-expanded="false">
+                    Dynamic Programming
+                </a>
+                <div class="collapse" id="dynamic-programming-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Dynamic%20Programming/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems Based on Dynamic Programming
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../../Graphs-BFS%2C%20DFS%2C%20Topological%20Sorting/Questions/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../../Sorting%20and%20Searching/Questions/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                            
+                                <div class="md-source source-detail">
+    <div class="md-source-repo-icon">
+        <i class="fa fa-github-alt drac-text-white" aria-hidden="true"></i>
+    </div>
+
+    <div class="md-source-repo-url">
+        <a href="https://github.com/pk1308/DBMS"
+            class="md-source drac-anchor drac-text drac-text-white drac-text-cyan-green--hover">
+            pk1308/DBMS
+        </a>
+
+        <ul class="md-source-repo-text">
+            <li>
+                <i class="fa fa-tag drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub tag (latest by date)"
+                    src="https://img.shields.io/github/v/tag/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-star drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub Repo stars"
+                    src="https://img.shields.io/github/stars/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-code-fork drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub forks"
+                    src="https://img.shields.io/github/forks/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+        </ul>
+    </div>
+
+</div>
+                            
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><div><h1 id="leet-code-problems-on-arrays-lists-stacks-queues-and-hashing">Leet Code Problems on Arrays, Lists, Stacks, Queues, and Hashing</h1>
+<h5 id="table-of-contents">📋 Table of Contents:</h5>
+<h5 id="1-valid-parentheses">1. <a href="#1-valid-parentheses-1">Valid Parentheses</a></h5>
+<h5 id="2-longest-consecutive-sequence">2. <a href="#2-longest-consecutive-sequence-1">Longest Consecutive Sequence</a></h5>
+<h5 id="3-rotate-list">3. <a href="#3-rotate-list-1">Rotate List</a></h5>
+<h5 id="4-swap-nodes-in-pairs">4. <a href="#4-swap-nodes-in-pairs-1">Swap Nodes in Pairs</a></h5>
+<h5 id="5-reverse-nodes-in-k-groups">5. <a href="#5-reverse-nodes-in-k-groups-1">Reverse Nodes in K Groups</a></h5>
+<h5 id="6-middle-of-the-linked-list">6. <a href="#6-middle-of-the-linked-list-1">Middle of The Linked List</a></h5>
+<h5 id="7-delete-the-middle-node">7. <a href="#7-delete-the-middle-node-1">Delete the Middle Node</a></h5>
+<h5 id="8-delete-nth-node-from-end">8. <a href="#8-delete-nth-node-from-end-1">Delete nth Node From End</a></h5>
+<h5 id="9-merge-two-sorted-lists">9. <a href="#9-merge-two-sorted-lists-1">Merge Two Sorted Lists</a></h5>
+<h2 id="1-valid-parentheses_1">1. <a href="https://leetcode.com/problems/valid-parentheses/description/">Valid Parentheses</a></h2>
+<h3 id="11-using-stacks">1.1 Using Stacks</h3>
+<p>🔍 Problem Understanding:</p>
+<p>There are only three types of brackets: <code>[], (), {}</code>.
+We need to close the last opened bracket first. This implies a Last In, First Out (LIFO) system. Can you think of the appropriate data structure here?
+Since LIFO behavior is required, a stack is perfect for tracking the parentheses. As we encounter opening parentheses, we add them to the stack. When we see a closing bracket, we remove (pop) the last added one.</p>
+<p>🤔 Think about this:</p>
+<p>Imagine you've processed the first two characters of the string and added them to the stack. Your stack might look like this: stack = ['(', '{']. Now, suppose the next character is }. How do you check if this closing bracket matches the last opened one?
+We can maintain a mapping like this: \
+<code>closing bracket : its corresponding opening bracket</code>. This allows us to verify that each closing bracket properly matches its corresponding opening one.</p>
+<p>⚠️ Edge Cases:</p>
+<p>What if there are opening brackets left in the stack, but no more characters in the string? Or vice versa—what if there are closing brackets in the string, but no opening ones left in the stack?</p>
+<p>Time Complexity: <span class="arithmatex">\(O(n)\)</span>
+Space Complexity: <span class="arithmatex">\(O(n)\)</span></p>
+<h4 id="code-implementation">💻 Code Implementation::</h4>
+<pre class="highlight"><code>class Solution:
+    def isValid(self, s: str) -&gt; bool:
+        # Keep the mapping as 'closing bracket' : 'Correspoding opening bracket'
+        mapping = { 
+            ')' : '(', 
+            ']' : '[', 
+            '}' : '{'
+        }
+
+        stack = [ ]
+
+        # O(n)
+        for char in s:
+            if char not in mapping: # This means that the bracket is an open bracket
+                stack.append(char)  # Simply add the open bracket to the stack     
+            else:
+                # Corner case- stack has no elements but the string has closing bracket
+                if len(stack) == 0:
+                    return False
+
+                # Check if opening bracket in the stack matches with the closing bracket in the string
+                if mapping[char] != stack.pop():
+                    return False
+
+        # if stack is empty after checking every char of string
+        # that means that we found the closing bracket for every opening bracket. Thus, return True
+        # And vice versa. Return False
+
+        return not stack # Returns True if stack is empty, False otherwise</code></pre>
+<h2 id="2-longest-consecutive-sequence_1">2. <a href="https://leetcode.com/problems/longest-consecutive-sequence/description/">Longest Consecutive Sequence</a></h2>
+<h3 id="21-brute-force">2.1 Brute Force</h3>
+<ul>
+<li>For every element, iterate over the array to check if the next element exists in the array. Keep doing this as long as the next element is found.</li>
+<li>Keep a counter for each sequence, and track the maximum.</li>
+<li>Time Complexity: <span class="arithmatex">\(O(n^2)\)</span>. But we are told to find an <span class="arithmatex">\(O(n)\)</span> solution!</li>
+</ul>
+<h3 id="22-improved-approach-using-sets">2.2 Improved Approach Using Sets</h3>
+<p>🧠 Deep Dive:</p>
+<p>In the brute-force approach, we had to iterate through the entire unsorted array to check if the next element existed. Is there a way to optimize this check?
+<strong>Hint</strong>: Consider using a data structure that allows constant-time lookups. </p>
+<p>We can use <strong>set</strong> data structure to serve this purpose!</p>
+<p>How would you solve this using sets?
+- For each number, while the next consecutive number exists, keep counting.
+- However, if we use this method directly, some numbers may be checked more than once, leading to <span class="arithmatex">\(O(n^2)\)</span> time complexity. Can we do better?</p>
+<p>Which numbers can start a consecutive sequence?
+- Only those numbers <code>n</code> where <code>n-1</code> is not in the set. Only these numbers can be the starting points of the longest consecutive sequence. Can you see why?
+- By finding these starting points, we can run our loop efficiently on only these elements.
+- Time Complexity: <span class="arithmatex">\(O(n)\)</span>
+- Space Complexity: <span class="arithmatex">\(O(n)\)</span></p>
+<h4 id="code">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    def longestConsecutive(self, nums: List[int]) -&gt; int:    
+
+        # Convert nums to a set
+        num_set = set(nums)
+
+        starting_points = set()
+
+        # Only those elements can be starting points where n - 1 is not in num_set
+        # O(n)
+        for num in nums:
+            if num - 1 not in num_set: 
+                starting_points.add(num)
+
+        max_length = 0
+        # Overall O(n), because the inner while loop is just going to run once for other elements
+        for current_num in starting_points:
+                current_length = 1
+
+                while current_num + 1 in num_set:
+                    current_num += 1
+                    current_length += 1
+
+                max_length = max(max_length, current_length)
+
+        return max_length</code></pre>
+<h2 id="3-rotate-list_1">3. <a href="https://leetcode.com/problems/rotate-list/description/">Rotate List</a></h2>
+<h3 id="31-rotation-logic">3.1 🔄 Rotation Logic:</h3>
+<ul>
+<li>If <span class="arithmatex">\(k \gt n\)</span>, then the number of effective rotations is: <span class="arithmatex">\(k = k \mod n\)</span>. </li>
+<li>Think about this as a three step problem:<ol>
+<li>First, traverse <span class="arithmatex">\(k\)</span> nodes. This <code>n - k</code>th node becomes the <code>newhead</code> of the rotated list.</li>
+<li>Next, connect the original list's tail to its <code>head</code>to create a cycle in the linked list.</li>
+<li>Finally, walk from the <code>newhead</code> for <code>n</code> nodes to find the <code>newtail</code>, which will become the tail of the rotated list by marking its next pointer as None.</li>
+</ol>
+</li>
+</ul>
+<h4 id="code-implementation_1">💻 Code Implementation::</h4>
+<pre class="highlight"><code>class Solution:
+    # Gets the length of node: 'n'
+    def get_length(self, head):
+        current = head
+        count = 0
+        while current:
+            current = current.next
+            count += 1        
+        return count
+
+    def rotateRight(self, head: Optional[ListNode], k: int) -&gt; Optional[ListNode]:
+        n = self.get_length(head)
+
+        # Corner case
+        if n &lt;= 1:
+            return head
+
+        k = k % n # Number of effective rotations
+
+        # In the original list, you need to walk these many steps to get to new head
+        walk_these_many_steps = n - k 
+
+        if k == 0 or walk_these_many_steps == 0:
+            return head
+
+        # Get the new head of the list that you will get after you rotate
+        current = head
+        count = 0
+        newhead = None
+        while current:
+            if count == walk_these_many_steps:
+                newhead = current
+                break
+
+            current = current.next
+            count += 1
+
+        # Get to the end of the list so that you can link tail with the head. 
+        # But now your linked list is a cycle
+        current = head
+        count = 0
+        while current:
+            if not current.next:
+                current.next = head
+                break
+            current = current.next
+
+        # Now you need to make the new tail point to None to break the cycle
+        current = newhead
+        count = 0
+        while current and count &lt; n:
+            current = current.next
+            count += 1
+            if count == n - 1:
+                current.next = None
+
+        return newhead</code></pre>
+<h2 id="4-swap-nodes-in-pairs_1">4. <a href="https://leetcode.com/problems/swap-nodes-in-pairs/description/">Swap Nodes in Pairs</a></h2>
+<h2 id="5-reverse-nodes-in-k-groups_1">5. <a href="https://leetcode.com/problems/reverse-nodes-in-k-group/description/">Reverse Nodes in K Groups</a></h2>
+<h3 id="51-using-recursion">5.1 Using Recursion</h3>
+<ul>
+<li>We know how to reverse a linked list from the Graded Assignment question. Given k, we can reverse the first k nodes and return the head and tail of the reversed portion.</li>
+<li>For the next k nodes, you can pass the kth_node.next as the head and reverse the subsequent k nodes, returning their head and tail. This way, you reverse groups of k nodes. But how do you connect these groups?</li>
+</ul>
+<p>🤔 Can you think of a recursive way?
+- Remember that the last reversed <code>k</code> nodes will be the first to return!
+- Let's take an example list: <code>1 -&gt; 2 -&gt; 3 -&gt; 4</code>, and <code>k = 2</code>.
+    - First, reverse <code>1 -&gt; 2</code> as <code>2 -&gt; 1</code>, and return the head as <code>2</code> and tail as <code>1</code>.
+    - Then, reverse <code>3 -&gt; 4</code> recursively as <code>4 -&gt; 3</code>, and return the head as <code>4</code> and tail as <code>3</code>.
+    - Now, Now, you just need to connect the tail of the first reversed group (1) to the head of the second reversed group (4). Voilà! You've connected the reversed groups.</p>
+<h4 id="code_1">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    # Helper function: returns the number of nodes in the linked list
+    def get_length(self, head):
+        count = 0
+        current = head
+        while current:
+            current = current.next
+            count += 1
+        return count
+
+    def reverse(self, head, k, n):
+        if not head:
+            return head, None
+
+        # If k &gt; n, then remaining nodes should remain as they are
+        if k &gt; n:
+            return head, None
+
+        # Reverse the K nodes in groups
+        current = head
+        prev = None
+        next_node = None
+        count = 0
+        while current and count &lt;= k:
+            # Counting because we want to mark the tail also
+            if count &lt; k:
+                next_node = current.next
+                current.next = prev       
+                prev = current            
+                current = next_node       
+
+            count += 1
+
+        curr_head = prev # The head of the reversed k nodes
+        curr_tail = head # tail of the reversed k nodes
+
+        # Recursively call reverse on the next k nodes
+        next_head, next_tail = self.reverse(next_node, k, n - k)
+
+        # Connect the current group's tail with the head of the next group
+        curr_tail.next = next_head 
+
+        return curr_head, curr_tail
+
+    def reverseKGroup(self, head: Optional[ListNode], k: int) -&gt; Optional[ListNode]:
+        n = self.get_length(head)
+        head, tail = self.reverse(head, k, n)
+        return head</code></pre>
+<h2 id="6-middle-of-the-linked-list_1">6. <a href="https://leetcode.com/problems/middle-of-the-linked-list/description/">Middle of The Linked List</a></h2>
+<h3 id="61-using-iteration">6.1 Using Iteration</h3>
+<p>How do we find the middle element in an array? We typically compute the middle index as: <code>mid = len(L) // 2</code> and then return <code>L[mid]</code>.</p>
+<p>Can you find out a similar approach in linked lists? Let's explore this:</p>
+<ol>
+<li>First, iterate over the entire list to determine its length.</li>
+<li>Next, compute the middle index. </li>
+<li>
+<p>Finally, traverse the list up to the middle node and return it. </p>
+</li>
+<li>
+<p>Time Complexity: <span class="arithmatex">\(O(n)\)</span></p>
+</li>
+</ol>
+<h4 id="code_2">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    def get_length(self, head):
+        """
+        Helper function- iterates over the entire linked list and returns the length of the list
+        """
+        counter = 0
+        while head:
+            counter += 1
+            head = head.next
+        return counter
+
+
+    def middleNode(self, head: Optional[ListNode]) -&gt; Optional[ListNode]:
+        # Handle the base case
+        if not head:
+            return 
+
+        # Compute the middle index 
+        n = self.get_length(head)
+        mid = n // 2
+
+        # Iterate mid number of steps
+        i = 0
+        while i &lt; mid: 
+            head = head.next # note that we are updating the head. So after "mid" iterations, head = middle node
+            i+=1
+
+        # Since head = mid after iterating, we return head
+        return head</code></pre>
+<h2 id="7-delete-the-middle-node_1">7. <a href="https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/description/">Delete the Middle Node</a></h2>
+<h3 id="71-using-iteration">7.1 Using Iteration</h3>
+<p>We’ve already discussed how to find the middle node in a linked list, right? So, if we know how to reach the middle node, can we figure out how to delete it? 🤔</p>
+<p>To delete a node in a linked list, here’s what we need to do:</p>
+<ol>
+<li>Stop at the node before the one we want to delete.</li>
+<li>Redirect the pointer: Change the next pointer of the current node to skip the node we want to delete and point to the node after it. Essentially, <code>current.next = current.next.next</code>.</li>
+</ol>
+<p>⚠️ Edge Cases:
+What if the linked list has only one node? In this scenario, we need to handle cases where <code>current.next.next</code> doesn’t exist.</p>
+<ul>
+<li>Time Complexity: <span class="arithmatex">\(O(n)\)</span></li>
+</ul>
+<h4 id="code_3">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    def get_length(self, head):
+        """
+        Helper function- iterates over the entire linked list and returns the length of the list
+        """
+        counter = 0
+        while head:
+            counter += 1
+            head = head.next
+        return counter
+
+    def deleteMiddle(self, head: Optional[ListNode]) -&gt; Optional[ListNode]:
+        mid = self.get_length(head) // 2
+
+        current = head # Iterate using current because we want to return the head
+
+        i = 0
+        # Stopping one node before the middle node
+        while i &lt; mid - 1:
+            current = current.next
+            i += 1
+
+        # Change links of the node before to the next to next node by handling corner case
+        if current.next and current.next.next:
+            current.next = current.next.next
+        else:
+            current.next = None
+        return head</code></pre>
+<h2 id="8-delete-nth-node-from-end_1">8. <a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/">Delete nth Node From End</a></h2>
+<h3 id="81-using-iteration">8.1 Using Iteration</h3>
+<p>This problem is very similar to the problem of deleting middle node.</p>
+<p>Observe that deleting the <code>nth</code> node from the end is the same as deleting <code>(length - n)th</code> node from the start. </p>
+<p>We can use a similar approach as we used in the above question to figure out the solution to this. </p>
+<h2 id="9-merge-two-sorted-lists_1">9. <a href="https://leetcode.com/problems/merge-two-sorted-lists/description/">Merge Two Sorted Lists</a></h2>
+<p>This problem is very similar to the <code>merge(A, B)</code> operation from the merge sort. But instead of merging arrays, we’re merging linked lists! 🔗</p>
+<h4 id="code_4">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -&gt; Optional[ListNode]:
+
+        # Dummy node to serve as a proxy for head of the list to return      
+        dummy = ListNode()
+        current = dummy
+
+        # Iterate as long as neither list is exhausted
+        while list1 and list2:
+            if list1.val &lt; list2.val:
+                current.next = list1
+                list1 = list1.next
+            else:
+                current.next = list2
+                list2 = list2.next
+            current = current.next
+
+        # Attach the remaining nodes of list1 or list2
+        if list1:
+            current.next = list1
+        elif list2:
+            current.next = list2
+
+        # The merged list is next to the dummy node
+        return dummy.next</code></pre></div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../javascripts/mathjax.js" defer></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js" defer></script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

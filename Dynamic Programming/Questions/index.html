@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Leet Code Problems Based on Dynamic Programming - DBMS</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        <meta name="author" content="PK">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">DBMS</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#greedy-collapse" aria-expanded="false">
+                    Greedy
+                </a>
+                <div class="collapse" id="greedy-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Greedy/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Problems on Greedy Algorithms
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#heaps-and-trees-collapse" aria-expanded="false">
+                    Heaps and Trees
+                </a>
+                <div class="collapse" id="heaps-and-trees-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Heaps%20and%20Trees/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Heaps and Trees
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#graphs-bfs,-dfs,-topological-sorting-collapse" aria-expanded="false">
+                    Graphs-BFS, DFS, Topological Sorting
+                </a>
+                <div class="collapse" id="graphs-bfs,-dfs,-topological-sorting-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Graphs-BFS%2C%20DFS%2C%20Topological%20Sorting/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Graph Algorithms
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#arrays,-lists,-stacks,-queues,-hashing-collapse" aria-expanded="false">
+                    Arrays, Lists, Stacks, Queues, Hashing
+                </a>
+                <div class="collapse" id="arrays,-lists,-stacks,-queues,-hashing-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Arrays%2C%20Lists%2C%20Stacks%2C%20Queues%2C%20Hashing/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Arrays, Lists, Stacks, Queues, and Hashing
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#sorting-and-searching-collapse" aria-expanded="false">
+                    Sorting and Searching
+                </a>
+                <div class="collapse" id="sorting-and-searching-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Sorting%20and%20Searching/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Problems on Sorting and Searching
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#shortest-paths-and-minimum-spanning-trees-collapse" aria-expanded="false">
+                    Shortest Paths and Minimum Spanning Trees
+                </a>
+                <div class="collapse" id="shortest-paths-and-minimum-spanning-trees-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Shortest%20Paths%20and%20Minimum%20Spanning%20Trees/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Shortest Path and Minimum Cost Spanning Trees
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#dynamic-programming-collapse" aria-expanded="false">
+                    Dynamic Programming
+                </a>
+                <div class="collapse" id="dynamic-programming-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems Based on Dynamic Programming
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../../Shortest%20Paths%20and%20Minimum%20Spanning%20Trees/Questions/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a 
+                        class="btn-preview drac-btn drac-text-white--hover disabled" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                            
+                                <div class="md-source source-detail">
+    <div class="md-source-repo-icon">
+        <i class="fa fa-github-alt drac-text-white" aria-hidden="true"></i>
+    </div>
+
+    <div class="md-source-repo-url">
+        <a href="https://github.com/pk1308/DBMS"
+            class="md-source drac-anchor drac-text drac-text-white drac-text-cyan-green--hover">
+            pk1308/DBMS
+        </a>
+
+        <ul class="md-source-repo-text">
+            <li>
+                <i class="fa fa-tag drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub tag (latest by date)"
+                    src="https://img.shields.io/github/v/tag/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-star drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub Repo stars"
+                    src="https://img.shields.io/github/stars/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-code-fork drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub forks"
+                    src="https://img.shields.io/github/forks/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+        </ul>
+    </div>
+
+</div>
+                            
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><div><h1 id="leet-code-problems-based-on-dynamic-programming">Leet Code Problems Based on Dynamic Programming</h1>
+<h5 id="1-climbing-stairs">1. <a href="#1-climbing-stairs-1">Climbing Stairs</a></h5>
+<h5 id="2-house-robber">2. <a href="#2-house-robber-1">House Robber</a></h5>
+<h5 id="3-fibonacci-numbers">3. <a href="#3-fibonacci-numbers-1">Fibonacci Numbers</a></h5>
+<h5 id="4-triangle">4. <a href="#triangle-1">Triangle</a></h5>
+<h5 id="5-coin-change">5. <a href="#5-coin-change-1">Coin Change</a></h5>
+<h2 id="1-climbing-stairs_1">1. <a href="https://leetcode.com/problems/climbing-stairs/description/">Climbing Stairs</a></h2>
+<h3 id="11-using-dynamic-programming">1.1 Using Dynamic Programming</h3>
+<p>Can you find out the recursive approach to this problem? Try to think about the base cases and the the recursive relation. </p>
+<ul>
+<li>
+<p>When you are on the <code>n</code>th step, there are zero ways to reach <code>n</code>th step. If you are on the <code>n-1</code>th step, there is only one way to reach <code>n</code>th step. Lastly, if you are on the <code>n-2</code>th step, there are two ways of reaching the <code>n</code>th step. </p>
+</li>
+<li>
+<p>Further, if you observe, the following relationship holds:
+$$
+ways(k) = ways(k - 1) + ways(k - 2)
+$$</p>
+</li>
+</ul>
+<p>The number of ways to reach a stair <span class="arithmatex">\(k\)</span> is the sum of the number of ways to reach the stairs <span class="arithmatex">\(k-1\)</span> and <span class="arithmatex">\(k-2\)</span>. </p>
+<p>Can you think of a solution that uses dynamic programming and solves this problem in linear time?</p>
+<h4 id="code">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    def climbStairs(self, n: int) -&gt; int:
+        L = [0]*n # Initialize the dynamic programming array
+
+        # Base Cases
+        if n == 1: return 1 
+        if n == 2: return 2
+
+        L[0] = 1
+        L[1] = 2
+
+        # ways[i] = ways[i - 1] + ways[i - 2]
+        for i in range(2, n):
+            L[i] = L[i - 1] + L[i - 2]
+
+        # Last element corresponds to the nth stair. So return that value.
+        return L[-1]</code></pre>
+<h2 id="2-house-robber_1">2. <a href="https://leetcode.com/problems/house-robber/description/">House Robber</a></h2>
+<h3 id="21-using-dynamic-programming">2.1 Using Dynamic Programming</h3>
+<p>We cannot break two adjacent houses. That is, <code>nums[i]</code> and <code>nums[i+1]</code> cannot be stolen together. So, for each house, we have to decide whether we should rob it or not. Now, let's think about how we can keep track of the maximum amount of money you can rob <strong>up to</strong> each house. We could use an array where each element represents the maximum amount of money that can be robbed up to that house. That is, <code>maximum_amount[i]</code> tells us the maximum amount of money that could be stolen up to the house <code>i</code>. </p>
+<p>What might be the base cases for this <code>maximum_amount</code>, abbreviated as <code>m_a</code>, array?
+- When it's the first house, then <code>m_a[0]</code> should the amount in the first house. 
+- When it's the second house, then <code>m_a[1]</code> should be the maximum for <code>nums[0]</code> and <code>nums[1]</code>, since they are adjacent and we cannot rob both. </p>
+<p>Can you come up with a recursive relation that solves this problem?
+- From the third house onwards, we can either rob the house or choose to not rob it. If we rob it, we can't rob the previous house. If we don't rob it, we can rob the previous house. 
+- In our <code>m_a</code> array, we can represent the relation as this:
+    - $ m_a[i] = max(m_a[i-1], m_a[i-2] + nums[i])$.
+    - If we don't rob the current house, we are taking the amount stolen up to the previous house. 
+    - If we rob the current house, then we are taking the amount stolen up to the second previous house and adding the amount from the current house to it. </p>
+<ul>
+<li>Whatever value we have accumulated till the last house will be the maximum amount that we can steal. </li>
+<li>Time Complexity: <span class="arithmatex">\(O(n)\)</span></li>
+</ul>
+<h4 id="code_1">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    def rob(self, nums: List[int]) -&gt; int:
+        if len(nums) == 1:
+            return nums[0]
+
+        maximum_amount = [0] * len(nums)
+
+        # Base cases
+        maximum_amount[0] = nums[0]
+        maximum_amount[1] = max(nums[0], nums[1])
+
+        for i in range(2, len(nums)):
+            maximum_amount[i] = max(maximum_amount[i-1], maximum_amount[i-2] + nums[i])
+
+        return maximum_amount[-1]</code></pre>
+<h2 id="3-fibonacci-numbers_1">3. <a href="https://leetcode.com/problems/fibonacci-number/description/">Fibonacci Numbers</a></h2>
+<h3 id="31-using-dynamic-programming">3.1 Using Dynamic Programming</h3>
+<p>Let's begin by thinking about the problem. We need to calculate the Fibonacci number $F(n) $ for a given <span class="arithmatex">\(n\)</span>. The Fibonacci sequence is defined as:</p>
+<ul>
+<li>$ F(0) = 0$</li>
+<li><span class="arithmatex">\(F(1) = 1\)</span></li>
+<li><span class="arithmatex">\(F(n) = F(n-1) + F(n-2) \text{ for } n &gt; 1\)</span></li>
+</ul>
+<p>Consider what this means. <span class="arithmatex">\(F(n)\)</span> is the sum of the two preceding numbers in the sequence. This suggests that if we know <span class="arithmatex">\(F(n-1)\)</span> and <span class="arithmatex">\(F(n-2)\)</span>, we can find $F(n) $.</p>
+<p>But how do we approach calculating <span class="arithmatex">\(F(n)\)</span>?</p>
+<p>First, think about the simplest cases, <span class="arithmatex">\(F(0)\)</span> and <span class="arithmatex">\(F(1)\)</span>. These are our base cases because they are defined directly without requiring any further calculations.</p>
+<p>Now, if <span class="arithmatex">\(n = 2\)</span>, we use the formula <span class="arithmatex">\(F(2) = F(1) + F(0)\)</span>. Since we already know $F(1) = 1 $ and $ F(0) = 0$, we can easily calculate $F(2) = 1 + 0 = 1 $.</p>
+<p>What if <span class="arithmatex">\(n = 3\)</span>? Again, using the formula, $F(3) = F(2) + F(1) $. From the previous steps, we know $ F(2) = 1 $ and $F(1) = 1 $, so $F(3) = 1 + 1 = 2 $.</p>
+<p>Notice that each time we calculate a Fibonacci number, we rely on the results of previous calculations. </p>
+<p>Now, let’s consider a general approach. If we want to calculate $F(n) $, how can we systematically work our way up from the base cases to $F(n) $?</p>
+<p>One way is to use <strong>recursion</strong>. We can define a function that calls itself with smaller values of $  n $ until it reaches the base cases. However, while recursion is elegant, it has a downside—repeatedly solving the same subproblems, which leads to inefficiency.</p>
+<p>Can we improve this?</p>
+<p>Yes, we can! Instead of recalculating the same Fibonacci numbers multiple times, we can <strong>store</strong> the results of each calculation and reuse them when needed.</p>
+<p>So here's the approach that we will take:
+- We will define an array named <code>fibtable</code>, where <code>fibtable[i]</code> is the <code>ith</code> number in the fibonacci sequence. 
+- Observe this relationship: <code>fibtable[i] = fibtable[i - 1] + fibtable[i - 2]</code>
+- Once we hardcode the base cases, we can iterate over the <code>i</code> upto <code>n</code>, and update the <code>fibtable[i]</code> as per the above update condition. </p>
+<h4 id="code_2">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    def fib(self, n: int) -&gt; int:
+        # Initialize the fibtable array to be all zeros
+        fibtable = [0] * (n + 1)
+
+        # Base Case 1: Where n == 0
+        if n == 0: return fibtable[0]
+
+        # Base Case 2: Where n == 1
+        fibtable[1] = 1
+
+        for i in range(2, n + 1):
+            #F(n) = F(n - 1) + F(n - 2)
+            fibtable[i] = fibtable[i - 1] + fibtable[i - 2]
+
+        # fibtable[i] is the ith fibonacci number. Thus, to get nth fibonacci number, return fibtable[n]
+        return fibtable[n]</code></pre>
+<h2 id="4-triangle_1">4. <a href="https://leetcode.com/problems/triangle/description/">Triangle</a></h2>
+<h3 id="41-using-dynamic-programming">4.1 Using Dynamic Programming</h3>
+<p>The question is asking for us to find the minimum path sum from the top to the bottom of the triangle, where each step can be to only the <code>ith</code> or <code>i + 1 th</code> cell in the row below. </p>
+<p>Can you break this problem into further subproblems?
+- If we start from the topmost cell of the triangle in the test case 1, the minimum path sum could be described using the following structure:
+<span class="arithmatex">\(MPS(2) = 2 + min(MPS(3), MPS(4))\)</span>, where $MPS(x) $ tells us the minimum path sum starting from a particular cell in the triangle. More generally, 
+<span class="arithmatex">\(MPS(triangle[row][col]) = triangle[row][col]+ min(MPS(triangle[row + 1][col]), MPS(triangle[row + 1][col + 1]))\)</span></p>
+<p>Can you identify the base cases here?
+- The base cases are all the leaf nodes of the triangle where there are no more children. </p>
+<p>Since we are solving subproblems and then combining those subproblems to solve the original problem, we can use dynamic programming here. Further, using bottom-up approach here might be better than using the top-down approach. </p>
+<p>After processing the last row, that is- the row of the base cases, we can move one level up in the triangle. After processing that level, we get a minimum path of length 2 for each of the cells in the second last row. More generally, after processing a row, each element in that row would hold the minimum path sum from that element to the bottom of the triangle. After processing the entire triangle, the top element of the triangle would hold the minimum path sum from the top to the bottom of the triangle, which is the answer to the problem.</p>
+<p>Here's how we can approach the pseudocode:
+- Start with the second last row. ( We don't need to start from the last row, as the last row is the base case and it will return values just the same as what are there in the cells)
+- Then for every cell of that row, we apply the following update rule:
+<span class="arithmatex">\(<span class="arithmatex">\(MPS(triangle[row][col]) = triangle[row][col]+ min(MPS(triangle[row + 1][col]), MPS(triangle[row + 1][col + 1]))\)</span>\)</span>
+- Repeat the same for every row till you reach the topmost row. 
+- Return the value from the cell at the top- first cell of the first row. </p>
+<pre class="highlight"><code>class Solution:
+    def minimumTotal(self, triangle: List[List[int]]) -&gt; int:
+        # Start from the second-to-last row of the triangle
+        for row in range(len(triangle) - 2, -1, -1):
+            for col in range(len(triangle[row])):
+                # Update the current element with the sum of the element itself
+                # and the minimum of the two adjacent elements in the row below
+                triangle[row][col] = triangle[row][col] +  min(triangle[row + 1][col], triangle[row + 1][col + 1])
+
+        # The top element now contains the minimum path sum
+        return triangle[0][0]</code></pre>
+<h2 id="5-coin-change_1">5. <a href="https://leetcode.com/problems/coin-change/description/">Coin Change</a></h2>
+<h3 id="51-using-dynamic-programming">5.1 Using Dynamic Programming</h3>
+<p>The first thought here can be that we need to use the greedy strategy. But as we can see from the test cases, the greedy strategy won't always give us the optimal solution. </p>
+<p>Can you try to break this problem down into subproblems and identify if there are overlapping subproblems?
+- We can observe that for a given amount, the minimum number of coins needed to get to that amount is one plus the minimum number of coins required to get <span class="arithmatex">\(amount - coin\)</span>. Concisely, we can write this as:
+    - <span class="arithmatex">\(mincoins(amount) = mincoins(amount - coin) + 1\)</span>
+- If you expand the subproblems for every coin in the given test case, you can observe that the subproblems overlap. </p>
+<p>How can you use dynamic programming to solve this problem?
+- Since we know the subproblem structure, we can use memoization. 
+- Keep an array of length <span class="arithmatex">\(amount + 1\)</span>, where each index <code>i</code> stores the minimum number of coins required to get change for amount <code>i</code>. Let this array be called <code>dp</code>.
+- Initially this array will be set to infinity. 
+- For each element, we will update the value as: 
+    - <code>dp[i] = min(dp[i], dp[i - coin] + 1)</code>
+    - We will do this for every amount in <code>range(0, amount + 1)</code>, and we will do this for every <code>coin</code> in the <code>coins</code> array.</p>
+<p>What can be the base cases here?
+- To get to amount <span class="arithmatex">\(0\)</span>, we need <span class="arithmatex">\(0\)</span> coins. Thus, <code>dp[0] = 0</code>. 
+- Further, for every coin in the given coins array, <code>dp[coin] = 1</code>, as one coin will suffice to get to that amount. </p>
+<h4 id="code_3">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    def coinChange(self, coins, amount):
+        # Initialize a dp array where dp[i] will hold the minimum number of coins required for amount i
+        dp = [float('inf')] * (amount + 1)
+
+        # Base case: No coins are needed to make amount 0
+        dp[0] = 0
+
+        for coin in coins:
+            dp[coin] = 1
+
+        # Fill the dp array
+        for coin in coins:
+            for x in range(coin, amount + 1):
+                dp[x] = min(dp[x], dp[x - coin] + 1)
+
+        # If dp[amount] is still inf, it means it's not possible to make that amount with given coins
+        return dp[amount] if dp[amount] != float('inf') else -1</code></pre></div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../javascripts/mathjax.js" defer></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js" defer></script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

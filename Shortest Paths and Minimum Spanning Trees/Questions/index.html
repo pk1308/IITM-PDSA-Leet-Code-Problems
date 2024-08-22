@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Leet Code Problems on Shortest Path and Minimum Cost Spanning Trees - DBMS</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        <meta name="author" content="PK">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">DBMS</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#greedy-collapse" aria-expanded="false">
+                    Greedy
+                </a>
+                <div class="collapse" id="greedy-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Greedy/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Problems on Greedy Algorithms
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#heaps-and-trees-collapse" aria-expanded="false">
+                    Heaps and Trees
+                </a>
+                <div class="collapse" id="heaps-and-trees-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Heaps%20and%20Trees/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Heaps and Trees
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#graphs-bfs,-dfs,-topological-sorting-collapse" aria-expanded="false">
+                    Graphs-BFS, DFS, Topological Sorting
+                </a>
+                <div class="collapse" id="graphs-bfs,-dfs,-topological-sorting-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Graphs-BFS%2C%20DFS%2C%20Topological%20Sorting/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Graph Algorithms
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#arrays,-lists,-stacks,-queues,-hashing-collapse" aria-expanded="false">
+                    Arrays, Lists, Stacks, Queues, Hashing
+                </a>
+                <div class="collapse" id="arrays,-lists,-stacks,-queues,-hashing-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Arrays%2C%20Lists%2C%20Stacks%2C%20Queues%2C%20Hashing/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Arrays, Lists, Stacks, Queues, and Hashing
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#sorting-and-searching-collapse" aria-expanded="false">
+                    Sorting and Searching
+                </a>
+                <div class="collapse" id="sorting-and-searching-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Sorting%20and%20Searching/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Problems on Sorting and Searching
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#shortest-paths-and-minimum-spanning-trees-collapse" aria-expanded="false">
+                    Shortest Paths and Minimum Spanning Trees
+                </a>
+                <div class="collapse" id="shortest-paths-and-minimum-spanning-trees-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Shortest Path and Minimum Cost Spanning Trees
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#dynamic-programming-collapse" aria-expanded="false">
+                    Dynamic Programming
+                </a>
+                <div class="collapse" id="dynamic-programming-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Dynamic%20Programming/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems Based on Dynamic Programming
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../../Sorting%20and%20Searching/Questions/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../../Dynamic%20Programming/Questions/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                            
+                                <div class="md-source source-detail">
+    <div class="md-source-repo-icon">
+        <i class="fa fa-github-alt drac-text-white" aria-hidden="true"></i>
+    </div>
+
+    <div class="md-source-repo-url">
+        <a href="https://github.com/pk1308/DBMS"
+            class="md-source drac-anchor drac-text drac-text-white drac-text-cyan-green--hover">
+            pk1308/DBMS
+        </a>
+
+        <ul class="md-source-repo-text">
+            <li>
+                <i class="fa fa-tag drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub tag (latest by date)"
+                    src="https://img.shields.io/github/v/tag/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-star drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub Repo stars"
+                    src="https://img.shields.io/github/stars/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-code-fork drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub forks"
+                    src="https://img.shields.io/github/forks/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+        </ul>
+    </div>
+
+</div>
+                            
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><div><h1 id="leet-code-problems-on-shortest-path-and-minimum-cost-spanning-trees">Leet Code Problems on Shortest Path and Minimum Cost Spanning Trees</h1>
+<h5 id="1-min-cost-to-connect-all-points">1. <a href="#1-min-cost-to-connect-all-points-1">Min Cost To Connect All Points</a></h5>
+<h5 id="2-cheapest-flight-within-k-stops">2. <a href="#2-cheapest-flight-within-k-stops-1">Cheapest Flight Within K Stops</a></h5>
+<h2 id="1-min-cost-to-connect-all-points_1">1. <a href="https://leetcode.com/problems/min-cost-to-connect-all-points/description/">Min Cost To Connect All Points</a></h2>
+<h3 id="11-minimum-cost-spanning-trees">1.1 Minimum Cost Spanning Trees</h3>
+<ul>
+<li>The question is asking for the minimum cost to connect all the points. Can you identify what type of a problem this is? It is a <strong>MCST</strong> problem!</li>
+<li>How can you convert the given points into a graph? Each point can represent a node in the graph. The edges are the distances between any two points in the graph. So, it will be a complete graph- where each node is connected to every other node with some cost.</li>
+<li>
+<p>Run a nested loop:</p>
+<ul>
+<li>For each point<ul>
+<li>For every other point, <ul>
+<li>Compute the distance and store the edge in an adjacency matrix or an adjacency list</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Once we have the graph representation, we can run either or Prim's or Kruskal's algorithm on this graph to get the Minimum Cost Spanning Tree's edges. </p>
+</li>
+<li>To compute the minimum cost, iterate over the Tree edges and sum the edge weights</li>
+</ul>
+<h4 id="code">Code:</h4>
+<pre class="highlight"><code>def kruskal(WList):
+    """Kruskal's as per the PDSA book"""
+    (edges,component,TE) = ([],{},[])
+    for u in WList.keys():
+        edges.extend([(d,u,v) for (v,d) in WList[u]])
+        component[u] = u
+
+    edges.sort()
+
+    for (d,u,v) in edges:
+        if component[u] != component[v]:
+            TE.append((u,v, d))
+            c = component[u]
+            for w in WList.keys():
+                if component[w] == c:
+                    component[w] = component[v]
+
+def compute_min_cost(TE) -&gt; int:
+    # Compute the Minimum Cost based on Tree Edges
+    min_cost = 0
+    for u, v, d in TE:
+        min_cost += d
+    return(min_cost)
+
+class Solution:
+    def minCostConnectPoints(self, points: List[List[int]]) -&gt; int:
+        # Init Adjacency Matrix
+        AList = { i : [] for i in range(len(points))}
+
+        # Each point can be connected to every other point and their manhattan distance can be computed.
+        for i in range(len(points)):
+            x1, y1 = points[i][0], points[i][1]
+            for j in range(i + 1, len(points)):
+                x2, y2 = points[j][0], points[j][1]
+                dist = abs(x1 - x2) + abs(y1 - y2)
+
+                # Distance from point i to j is same as from j to i. So init both entries
+                AList[i].append((j, dist))
+                AList[j].append((i, dist))
+
+        tree_edges = kruskal(AList)
+        minimum_cost = compute_min_cost(tree_edges)
+        return minimum_cost</code></pre>
+<h2 id="2-cheapest-flight-within-k-stops_1">2. <a href="https://leetcode.com/problems/cheapest-flights-within-k-stops/description/">Cheapest Flight Within K Stops</a></h2>
+<h3 id="21-using-bellman-ford">2.1 Using Bellman-Ford</h3></div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../javascripts/mathjax.js" defer></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js" defer></script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

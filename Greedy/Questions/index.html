@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Problems on Greedy Algorithms - DBMS</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        <meta name="author" content="PK">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">DBMS</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#greedy-collapse" aria-expanded="false">
+                    Greedy
+                </a>
+                <div class="collapse" id="greedy-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Problems on Greedy Algorithms
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#heaps-and-trees-collapse" aria-expanded="false">
+                    Heaps and Trees
+                </a>
+                <div class="collapse" id="heaps-and-trees-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Heaps%20and%20Trees/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Heaps and Trees
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#graphs-bfs,-dfs,-topological-sorting-collapse" aria-expanded="false">
+                    Graphs-BFS, DFS, Topological Sorting
+                </a>
+                <div class="collapse" id="graphs-bfs,-dfs,-topological-sorting-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Graphs-BFS%2C%20DFS%2C%20Topological%20Sorting/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Graph Algorithms
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#arrays,-lists,-stacks,-queues,-hashing-collapse" aria-expanded="false">
+                    Arrays, Lists, Stacks, Queues, Hashing
+                </a>
+                <div class="collapse" id="arrays,-lists,-stacks,-queues,-hashing-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Arrays%2C%20Lists%2C%20Stacks%2C%20Queues%2C%20Hashing/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Arrays, Lists, Stacks, Queues, and Hashing
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#sorting-and-searching-collapse" aria-expanded="false">
+                    Sorting and Searching
+                </a>
+                <div class="collapse" id="sorting-and-searching-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Sorting%20and%20Searching/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Problems on Sorting and Searching
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#shortest-paths-and-minimum-spanning-trees-collapse" aria-expanded="false">
+                    Shortest Paths and Minimum Spanning Trees
+                </a>
+                <div class="collapse" id="shortest-paths-and-minimum-spanning-trees-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Shortest%20Paths%20and%20Minimum%20Spanning%20Trees/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems on Shortest Path and Minimum Cost Spanning Trees
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#dynamic-programming-collapse" aria-expanded="false">
+                    Dynamic Programming
+                </a>
+                <div class="collapse" id="dynamic-programming-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Dynamic%20Programming/Questions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Leet Code Problems Based on Dynamic Programming
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a 
+                        class="btn-preview drac-btn drac-text-white--hover disabled">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../../Heaps%20and%20Trees/Questions/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                            
+                                <div class="md-source source-detail">
+    <div class="md-source-repo-icon">
+        <i class="fa fa-github-alt drac-text-white" aria-hidden="true"></i>
+    </div>
+
+    <div class="md-source-repo-url">
+        <a href="https://github.com/pk1308/DBMS"
+            class="md-source drac-anchor drac-text drac-text-white drac-text-cyan-green--hover">
+            pk1308/DBMS
+        </a>
+
+        <ul class="md-source-repo-text">
+            <li>
+                <i class="fa fa-tag drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub tag (latest by date)"
+                    src="https://img.shields.io/github/v/tag/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-star drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub Repo stars"
+                    src="https://img.shields.io/github/stars/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-code-fork drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub forks"
+                    src="https://img.shields.io/github/forks/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+        </ul>
+    </div>
+
+</div>
+                            
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><div><h1 id="problems-on-greedy-algorithms">Problems on Greedy Algorithms</h1>
+<h5 id="1-n-meetings-in-one-room">1. <a href="#1-n-meetings-in-one-room-1">N Meetings in One Room</a></h5>
+<h5 id="2-activity-selection">2. <a href="#2-activity-selection-1">Activity Selection</a></h5>
+<h5 id="3-minimum-number-of-coins">3. <a href="#3-minimum-number-of-coins-1">Minimum Number of Coins</a></h5>
+<h5 id="4-jump-game">4. <a href="#4-jump-game-1">Jump Game</a></h5>
+<h5 id="5-jump-game-ii">5. <a href="#5-jump-game-ii-1">Jump Game-II</a></h5>
+<h2 id="1-n-meetings-in-one-room_1">1. <a href="https://www.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1">N Meetings in One Room</a></h2>
+<h3 id="11-using-greedy-approach">1.1 Using Greedy Approach</h3>
+<p>The question is asking us to find out the maximum number of meetings that could be scheduled without conflicts given two arrays- <code>start</code> and <code>end</code>. </p>
+<p>Can you find out what type of problem this is?
+- It is a classic interval scheduling problem. </p>
+<p>The way we go about solving such problems is by sorting the schedules based on their end times and then picking those meetings that don't conflict. </p>
+<p>Here's how we can approach the solution:
+- Combine the <code>start</code> and <code>end</code> arrays into a single array of the form: <code>[start_i, end_i]</code>
+- Sort the list based on the times
+- Keep track of the end time of the last meet.
+    - If the start of the current meet overlaps with the previous end time, then we skip the meet. 
+    - Else, we increment the meeting counter, and update the previous end time as the end time of the current meet. </p>
+<h4 id="code">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    def maximumMeetings(self,n,start,end):
+        # code here
+        times = [ [start[i], end[i]] for i in range(n)]
+
+        # Sort based on end times
+        times.sort(key=lambda x:x[1])
+
+        count = 0
+        prev_endtime = None
+        for start_time, end_time in times:
+            # First meeting
+            if not prev_endtime:
+                prev_endtime = end_time
+                count += 1
+            else:
+                # Check if the previous meet's endtime clashes with the start time of the current meet
+                if prev_endtime &lt; start_time:
+                    prev_endtime = end_time
+                    count += 1
+        return count    </code></pre>
+<h2 id="2-activity-selection_1">2. <a href="https://www.geeksforgeeks.org/problems/activity-selection-1587115620/1">Activity Selection</a></h2>
+<h3 id="21-greedy-approach">2.1 Greedy Approach</h3>
+<p>Same approach as the above question. </p>
+<h4 id="code_1">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    def activitySelection(self,n,start,end):
+        # Rearrange the start and end arrays into a single array
+        arr = [ [start[i], end[i]] for i in range(n) ]
+
+        # Sort based on end times
+        arr.sort(key=lambda x:x[1])
+
+        count = 0
+        prev_endtime = None
+        for start_time, end_time in arr:
+            # First activity
+            if not prev_endtime:
+                prev_endtime = end_time
+                count += 1
+            else:
+                # Check if the previous activity's endtime clashes with the start time of the current activity
+                if start_time &gt; prev_endtime:
+                    count += 1
+                    prev_endtime = end_time
+        return count</code></pre>
+<h2 id="3-minimum-number-of-coins_1">3. <a href="https://www.geeksforgeeks.org/problems/-minimum-number-of-coins4426/1">Minimum Number of Coins</a></h2>
+<h3 id="31-using-greedy">3.1 Using Greedy</h3>
+<p>Note: In general, we cannot guarantee that greedy algorithm will produce correct output. However, in the case of this question, we can use greedy approach. Because the number of smaller denominations is bounded by the fact that we can use larger denominations to represent the smaller denominations. For example, the number of coins of denomination 2 cannot be more than 2, because if their number is 3, then we can replace it with one coin of denomination 5 and one coin of denomination 1. That is, with fewer coins of larger denomination, we can represent more coins of lower denomination. </p>
+<p>Thus, we can choose a greedy approach:
+- Keep on subtracting the coin of largest denomination. Then move on to second largest, then third, and so on, till you reach 0. 
+- Every time you subtract a coin / note, add the denomination to a results array.</p>
+<h4 id="code_2">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    def minPartition(self, N):
+        denominations = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1]  # List of denominations in descending order
+        result = []  # List to store the coins/notes used
+
+        for coin in denominations:
+            while N &gt;= coin:  # Check how many times the coin/note can fit into the remaining amount
+                N -= coin  # Subtract the coin/note value from target
+                result.append(coin)  # Add the coin/note to the result list
+
+        return result</code></pre>
+<h2 id="4-jump-game_1">4. <a href="https://leetcode.com/problems/jump-game/description/">Jump Game</a></h2>
+<h3 id="41-using-greedy-approach">4.1 Using Greedy Approach</h3>
+<p>The question is asking us to find out whether the last index can be reached or not using the given <code>nums</code> array. <code>nums[i]</code> corresponds to the maximum jump we can take from the <code>ith</code> index. We can solve this problem using the Greedy Approach. </p>
+<p>Here's how:
+- We'll keep a <code>max_jump</code> variable, that acts like a flagpost. It tells what is the maximum index that we can reach based on the values of <code>nums[i]</code> we have seen so far. 
+- Then we iterate over all the values of <code>nums</code>.
+    - Whenever this <code>max_index</code> goes beyond the length of the array, we will return <code>True</code>. 
+    - For every value in <code>nums</code>, we update the <code>max_jump</code> as: <code>max_jump = max(max_jump, nums[i] + i)</code>
+    - But it is also possible that we cannot reach the last index. Consider the example <code>nums = [1, 0, 2]</code>. In this example, once we reach the 1st index, there is no way to move forward. Can we capture this in a condition?
+        - Whenever <code>i &gt; max_jump</code>, that means we have reached a place from where we cannot proceed further. Thus, we can return <code>False</code> here. </p>
+<h4 id="code_3">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    def canJump(self, nums: List[int]) -&gt; bool:
+        max_jump = 0
+        for i in range(len(nums)):
+            # i &lt;= max_jump -&gt; case to check [1, 0, 2] like condition
+            # nums[i] + i &gt; max_jump to update the jump
+            if i &lt;= max_jump and nums[i] + i &gt; max_jump :
+                max_jump = nums[i] + i
+
+        # Check whether you can reach the last index or not.
+        return max_jump &gt;= len(nums) - 1</code></pre>
+<h2 id="5-jump-game-ii_1">5 <a href="https://leetcode.com/problems/jump-game-ii/">Jump Game-II</a></h2>
+<h3 id="using-greedy-approach">Using Greedy Approach</h3>
+<h4 id="code_4">Code:</h4>
+<pre class="highlight"><code>class Solution:
+    def jump(self, nums: List[int]) -&gt; bool:
+        n = len(nums)
+        if n == 1:
+            return 0
+
+        jump_count = 0
+        current_end = 0
+        max_jump = 0
+
+        for i in range(n - 1):
+            max_jump = max(max_jump, i + nums[i])
+
+            # When we reach the end of the current jump. For example, [3, 5, 1, 1, 1, 1]
+            if i == current_end:
+                jump_count += 1
+                current_end = max_jump
+
+                # If we can reach the end, break early
+                if current_end &gt;= n - 1:
+                    break
+
+        return jump_count</code></pre></div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../javascripts/mathjax.js" defer></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js" defer></script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>
